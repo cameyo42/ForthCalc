@@ -18,6 +18,7 @@ Features:
 - Infinity and NaN numbers
 - Copy and paste stack numbers
 - Save and Load stack numbers
+- ...
 
 Fast Fibonacci routine  
 Copyright (c) 2017 Project Nayuki  
