@@ -12,10 +12,14 @@ Features:
 - Fraction arithmetic
 - Number to Fraction Generator
 - Combinations, Permutations
-- Factorial, Fibonacci
+- Factorial, Fibonacci (BigInteger)
 - DMS <-> DD
 - Statistical parameters of a serie
 - Infinity and NaN numbers
 - Copy and paste stack numbers
 - Save and Load stack numbers
 
+Fast Fibonacci routine
+Copyright (c) 2017 Project Nayuki
+All rights reserved. Contact Nayuki for licensing.
+https://www.nayuki.io/page/fast-fibonacci-algorithms
