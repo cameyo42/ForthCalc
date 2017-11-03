@@ -19,7 +19,7 @@ Features:
 - Copy and paste stack numbers
 - Save and Load stack numbers
 
-Fast Fibonacci routine
-Copyright (c) 2017 Project Nayuki
-All rights reserved. Contact Nayuki for licensing.
-https://www.nayuki.io/page/fast-fibonacci-algorithms
+Fast Fibonacci routine  
+Copyright (c) 2017 Project Nayuki  
+All rights reserved. Contact Nayuki for licensing.  
+https://www.nayuki.io/page/fast-fibonacci-algorithms  
