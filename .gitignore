@@ -1,0 +1,26 @@
+dataWORK
+output
+
+# Created by https://www.gitignore.io/api/code,notepadpp,processing
+
+### Code ###
+# Visual Studio Code - https://code.visualstudio.com/
+.settings/
+.vscode/
+tsconfig.json
+jsconfig.json
+
+### NotepadPP ###
+# Notepad++ backups #
+*.bak
+
+### Processing ###
+.DS_Store
+applet
+application.linux32
+application.linux64
+application.windows32
+application.windows64
+application.macosx
+
+# End of https://www.gitignore.io/api/code,notepadpp,processing
