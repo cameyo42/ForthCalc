@@ -894,12 +894,6 @@ void fnFACT()
     isResult = true;
     isBlocked = false;
 
-    // Update window (write is another thread)
-    background(backCol);
-    drawLCD();
-    showGUI();
-    if (viewShortcuts) { image(short_IMG, 0, 0); }
-
     // write result on file
     String s = f.toString();
     String n = num.toString();
@@ -907,6 +901,14 @@ void fnFACT()
     String filename = "fact" + n + ".txt";
     saveStrings(dataPath(filename), data);
     cursor(ARROW);
+    
+    // Update window (write is another thread)
+    //background(backCol);
+    //drawLCD();
+    //showGUI();
+    //if (viewShortcuts) { image(short_IMG, 0, 0); }
+    loop();
+
 
   }
   else { outputSTR = "x!: positive integer number required."; }
@@ -948,12 +950,6 @@ void fnFIBO()
     isResult = true;
     isBlocked = false;
 
-    // Update window (write is another thread)
-    background(backCol);
-    drawLCD();
-    showGUI();
-    if (viewShortcuts) { image(short_IMG, 0, 0); }
-
     // write result on file
     String s = f.toString();
     String n = Integer.toString(num);
@@ -962,6 +958,14 @@ void fnFIBO()
     saveStrings(dataPath(filename), data);
     //println(r);
     cursor(ARROW);
+    
+    // Update window (write is another thread)
+    //background(backCol);
+    //drawLCD();
+    //showGUI();
+    //if (viewShortcuts) { image(short_IMG, 0, 0); }
+    loop();
+    
   }
   else { outputSTR = "Fibonacci: positive number required."; }
 }
@@ -1022,7 +1026,7 @@ long calcBinomial(int n, int k)
 // Definition: nPr(n,r)=n!/(n−r)!nPr(n,r)=n!/(n−r)!
 // Assume there are three persons namely A, B and C in the park. 
 // But there is only two seats available for them. 
-// Then possible ways of people can sit over the seat using permutaion is:
+// Then possible ways of people can sit over the seat using permutation is:
 // {AB, BA, AC, CA, BC, CB} = 6 ways persons can sit on that seats.
 // nPr(n,r) = n!/(n−r)! = 6 ways
 void fnPERM()

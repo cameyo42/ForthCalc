@@ -219,6 +219,7 @@ void init()
 //*********************************
 void draw()
 {
+  println("Redraw: ",frameCount);
   if (start)
   {
     background(backCol);
@@ -451,10 +452,11 @@ void fnloadFILE()
     isBlocked = false;
 
     // Update window (read is another thread)
-    background(backCol);
-    drawLCD();
-    showGUI();
-    if (viewShortcuts) { image(short_IMG, 0, 0); }
+    //background(backCol);
+    //drawLCD();
+    //showGUI();
+    //if (viewShortcuts) { image(short_IMG, 0, 0); }
+    loop();
   }
   else
   {
