@@ -46,145 +46,6 @@ void fnLASTX()
   outputSTR = String.valueOf(digitNUM);
 }
 
-void fnINDEG() { inDegrees = true; }
-
-void fnINRAD() { inDegrees = false; }
-
-void fnFIX()
-{
-  if ((digitNUM >= -1.0) && (digitNUM < 10.0) && ((int)digitNUM == digitNUM))
-  {
-    int num = (int) digitNUM;
-    numFloating = num;
-    digitRESET = "0." + nf(0, numFloating);
-    fnDROP();
-  }
-  else { outputSTR = "FIX: integer number required [-1, 9]"; }
-}
-
-void enterPressed()
-{
-  pila.push(digitNUM);
-  isBlocked = true;
-  isResult = true;
-  digitSTR="";
-  outputSTR = String.valueOf(digitNUM);
-}
-
-void fn0() { numberButtonPressed("0"); }
-void fn1() { numberButtonPressed("1"); }
-void fn2() { numberButtonPressed("2"); }
-void fn3() { numberButtonPressed("3"); }
-void fn4() { numberButtonPressed("4"); }
-void fn5() { numberButtonPressed("5"); }
-void fn6() { numberButtonPressed("6"); }
-void fn7() { numberButtonPressed("7"); }
-void fn8() { numberButtonPressed("8"); }
-void fn9() { numberButtonPressed("9"); }
-
-void numberButtonPressed (String num)
-{
-  if (isResult)
-  {
-    if (!isBlocked) { pila.push(digitNUM); }
-    digitSTR = "";
-  }
-  isResult = false;
-  if (digitSTR.length() < maxDigits)
-  {
-    digitSTR = digitSTR + num;
-    digitNUM = Double.valueOf(digitSTR);
-  }
-  outputSTR = String.valueOf(digitNUM);
-}
-
-void numberPressed()
-{
-  if (isResult)
-  {
-    if (!isBlocked) { pila.push(digitNUM); }
-    digitSTR = "";
-  }
-  isResult = false;
-  if (digitSTR.length() < maxDigits)
-  {
-    int num = key - 48;
-    digitSTR = digitSTR + str(num);
-    digitNUM = Double.valueOf(digitSTR);
-  }
-  outputSTR = String.valueOf(digitNUM);
-}
-
-void changeSignPressed()
-{
-  if ((!isResult) && (digitSTR.length() != 0) && (digitNUM != 0.0))
-  {
-    if (digitSTR.charAt(0) == '-')
-    { digitSTR = digitSTR.substring(1, digitSTR.length()); }
-    else { digitSTR = '-' + digitSTR; }
-    digitNUM = Double.valueOf(digitSTR);
-  }
-  else if ((isResult) && (digitNUM != 0.0))
-  {
-    digitNUM = - digitNUM;
-  }
-  outputSTR = String.valueOf(digitNUM);
-}
-
-void dotPressed()
-{
-  if (isResult)
-  {
-    digitSTR = "0.";
-    if (!isBlocked) pila.push(digitNUM);
-    digitNUM = 0.0;
-    isResult = false;
-    isBlocked = false;
-  }
-  else if (digitSTR.indexOf('.') < 0)
-  {
-    digitSTR = digitSTR + ".";
-  }
-}
-
-void backspacePressed()
-{
-  if (isResult)
-  {
-   digitSTR = digitRESET;
-   digitNUM = 0.0;
-   isBlocked = true;
-  }
-  else
-  {
-    if (digitSTR.length() > 1)
-    {
-      digitSTR = digitSTR.substring(0, digitSTR.length() - 1);
-      if (digitSTR.equals("-"))
-      { digitNUM = 0.0; digitSTR = digitRESET; isResult = true;}
-      else { digitNUM = Double.valueOf(digitSTR); }
-    }
-    else
-    {
-      digitSTR = digitRESET;
-      digitNUM = 0.0;
-      isResult = true;
-      isBlocked = true;
-    }
-  }
-  outputSTR = String.valueOf(digitNUM);
-}
-
-void deletePressed()
-{
-  lastX = digitNUM;
-  digitNUM = 0.0;
-  digitSTR = digitRESET;
-  isResult = true;
-  isBlocked = true;
-  outputSTR = String.valueOf(digitNUM);
-}
-
 // create number with exponent Yx10^X
 void fnEEX()
 {
@@ -713,65 +574,6 @@ void fnDD() // from degrees minute second to decimal degrees
   }
   else { outputSTR = "Decimal Degrees: three numbers required (grad min sec)."; }
 }
-
-
-// Memory function
-void fnSTO1() { mem1 = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
-void fnSTO2() { mem2 = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
-void fnSTO3() { mem3 = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
-void fnSTO4() { mem4 = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
-void fnSTO5() { mem5 = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
-
-void fnRCL1()
-{
-  lastX = digitNUM;
-  if (!isBlocked && isResult) { pila.push(digitNUM); }
-  //pila.push(digitNUM);
-  digitNUM = mem1;
-  outputSTR = String.valueOf(digitNUM);
-  isResult = true;
-  isBlocked = false;
-}
-void fnRCL2()
-{
-  lastX = digitNUM;
-  if (!isBlocked && isResult) { pila.push(digitNUM); }
-  //pila.push(digitNUM);
-  digitNUM = mem2;
-  outputSTR = String.valueOf(digitNUM);
-  isResult = true;
-  isBlocked = false;
-}
-void fnRCL3()
-{
-  lastX = digitNUM;
-  if (!isBlocked && isResult) { pila.push(digitNUM); }
-  //pila.push(digitNUM);
-  digitNUM = mem3;
-  outputSTR = String.valueOf(digitNUM);
-  isResult = true;
-  isBlocked = false;
-}
-void fnRCL4()
-{
-  lastX = digitNUM;
-  if (!isBlocked && isResult) { pila.push(digitNUM); }
-  //pila.push(digitNUM);
-  digitNUM = mem4;
-  outputSTR = String.valueOf(digitNUM);
-  isResult = true;
-  isBlocked = false;
-}
-void fnRCL5()
-{
-  lastX = digitNUM;
-  if (!isBlocked && isResult) { pila.push(digitNUM); }
-  //pila.push(digitNUM);
-  digitNUM = mem5;
-  outputSTR = String.valueOf(digitNUM);
-  isResult = true;
-  isBlocked = false;
-}
 //------------------------------------------------------------
 
 
@@ -789,6 +591,27 @@ void fnRND()
   isBlocked = false;
 }
 
+void fnRound()
+{ 
+  if (pila.stackSize() > 0)
+  {
+    if ((digitNUM >= 0.0) && (digitNUM < 10.0) && ((int)digitNUM == digitNUM))
+    {
+      int n = (int) digitNUM;
+      double x = pila.pop();
+      if (n == 0) { digitNUM = Math.rint(x); }
+      else
+      {
+        digitNUM = Math.round(x * Math.pow(10,(double) n)) / Math.pow(10,(double) n);
+      }
+      outputSTR = String.valueOf(digitNUM);
+      isResult = true;
+      isBlocked = false;      
+    }
+    else { outputSTR = "Round: integer number required [0, 9]"; }
+  } 
+  else { outputSTR = "Round: two number required."; }  
+}
 
 // ---------- ALGEBRIC FUNCTIONS ----------
 // Solve quadratic equation (a*x^2 +b*x + c = 0 )
@@ -992,14 +815,12 @@ void fnPROPORTION()
     double c = pila.pop();
     double b = pila.pop();
     double a = pila.pop();
-    if (a == 0.0)      { if (d != 0.0) { a = (b*c)/d; } }
-    else if (b == 0.0) { if (c != 0.0) { b = (a*d)/c; } }
-    else if (c == 0.0) { if (b != 0.0) { c = (a*d)/b; } }
-    else if (d == 0.0) { if (a != 0.0) { d = (b*c)/a; } }
-    pila.push(a);
-    pila.push(b);
-    pila.push(c);
-    digitNUM = d;
+    digitNUM = -1;
+    if (a == 0.0) { if (d != 0.0) { a = (b*c)/d; digitNUM = a; } }
+    else if (b == 0.0) { if (c != 0.0) { b = (a*d)/c; digitNUM = b; } }
+    else if (c == 0.0) { if (b != 0.0) { c = (a*d)/b; } digitNUM = c; }
+    else if (d == 0.0) { if (a != 0.0) { d = (b*c)/a; } digitNUM = d; }
+    //pila.push(a); //pila.push(b); //pila.push(c); //digitNUM = d;
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
@@ -1110,88 +931,6 @@ BigInteger factorial(BigInteger n)
 //  return factorial;
 //}
 
-// Binomial Coefficient
-void fnBINOMIAL()
-{
-  if (pila.stackSize() > 0)
-  {
-    lastX = digitNUM;
-    int x = (int) digitNUM;
-    int y = (int) pila.pop();
-    long bin = calcBinomial(y,x);
-    digitNUM = (double) calcBinomial(y,x);
-    outputSTR = String.valueOf(digitNUM);
-    isResult = true;
-    isBlocked = false;
-  }
-  else { outputSTR = "Binomial: two numbers required."; }
-}
-long calcBinomial(int n, int k)
-{
-  long[][] binomial = new long[n+1][k+1];
-  // base cases
-  for (int i = 0; i <= n; i++) binomial[i][0] = 1;
-  for (int j = 1; j <= k; j++) binomial[0][j] = 0;
-  // bottom-up dynamic programming
-  for (int i = 1; i <= n; i++)
-  {
-    for (int j = 1; j <= k; j++)
-    {
-      binomial[i][j] = binomial[i-1][j-1] + binomial[i-1][j];
-    }
-  } 
-  return(binomial[n][k]);
-}
-
-// Permutations
-// nPr = n! / (n-r)!
-void fnPERM()
-{
-  if (pila.stackSize() > 0)
-  {
-    lastX = digitNUM;
-    long r = (long) digitNUM;
-    long n = (long) pila.pop();
-    digitNUM = (double) calc_nPr(n, r);
-    outputSTR = String.valueOf(digitNUM);
-    isResult = true;
-    isBlocked = false;
-  }
-  else { outputSTR = "Permutations: two numbers required."; }
-}
-long calc_nPr(long n, long r)
-{
-  long result = 1;
-  if (r > n) return 0;
-  for(long i=(n-r+1); i<(n+1); i++)
-  {
-    result = result * i;
-  }
-  return result;
-}
-
-// Combinations
-// nCr = n!/((n-r)!*r!) = nPr / r!
-void fnCOMB()
-{
-  if (pila.stackSize() > 0)
-  {
-    lastX = digitNUM;
-    long r = (long) digitNUM;
-    long n = (long) pila.pop();
-    long nCr = calc_nPr(n, r);
-    for(int i=1; i<(r+1); i++)
-    {
-      nCr = nCr / i;
-    }
-    digitNUM = (double) nCr;
-    outputSTR = String.valueOf(digitNUM);
-    isResult = true;
-    isBlocked = false;
-  }
-  else { outputSTR = "Combinations: two numbers required."; }
-}
-
 // Fibonacci
 void fnFIBO()
 {
@@ -1239,6 +978,105 @@ BigInteger Fibonacci(int n)
     b = c;
   }
   return a;
+}
+
+// Binomial Coefficient
+// numero delle combinazioni semplici di n elementi di classe k
+void fnBINOMIAL()
+{
+  if (pila.stackSize() > 0)
+  {
+    lastX = digitNUM;
+    int x = (int) digitNUM;
+    int y = (int) pila.pop();
+    long bin = calcBinomial(y,x);
+    digitNUM = (double) calcBinomial(y,x);
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+  else { outputSTR = "Binomial: two numbers required."; }
+}
+long calcBinomial(int n, int k)
+{
+  long[][] binomial = new long[n+1][k+1];
+  // base cases
+  for (int i = 0; i <= n; i++) binomial[i][0] = 1;
+  for (int j = 1; j <= k; j++) binomial[0][j] = 0;
+  // bottom-up dynamic programming
+  for (int i = 1; i <= n; i++)
+  {
+    for (int j = 1; j <= k; j++)
+    {
+      binomial[i][j] = binomial[i-1][j-1] + binomial[i-1][j];
+    }
+  } 
+  return(binomial[n][k]);
+}
+
+// Permutations
+// nPr = n! / (n-r)!
+// numero di gruppi con r elementi scelti da n elementi (con diverso ordinamento)
+// Permutation:
+// Def: The number of possibilities for choosing an ordered set of r objects (a permutation) from a total of n objects. 
+// Definition: nPr(n,r)=n!/(n−r)!nPr(n,r)=n!/(n−r)!
+// Assume there are three persons namely A, B and C in the park. 
+// But there is only two seats available for them. 
+// Then possible ways of people can sit over the seat using permutaion is:
+// {AB, BA, AC, CA, BC, CB} = 6 ways persons can sit on that seats.
+// nPr(n,r) = n!/(n−r)! = 6 ways
+void fnPERM()
+{
+  if (pila.stackSize() > 0)
+  {
+    lastX = digitNUM;
+    long r = (long) digitNUM;
+    long n = (long) pila.pop();
+    digitNUM = (double) calc_nPr(n, r);
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+  else { outputSTR = "Permutations: two numbers required."; }
+}
+long calc_nPr(long n, long r)
+{
+  long result = 1;
+  if (r > n) return 0;
+  for(long i=(n-r+1); i<(n+1); i++)
+  {
+    result = result * i;
+  }
+  return result;
+}
+
+// Combinations
+// nCr = n!/((n-r)!*r!) = nPr / r!
+// numero di gruppi con r elementi scelti da n elementi (indipendenti dall'ordinamento)
+// Combination:
+// Def: The number of different, unordered combinations of r objects from a set of n objects. 
+// Definition: nCr(n,r) = nPr(n,r)/r! = n!/r!(n−r)!
+// Where combination says AB and BA are same since order is doesn't matters.
+// So {AB, AC, BC} = 3 (combination) ways persons can sit on that seats
+// nCr(n,r) = n!/r!(n−r)! = 3 ways
+void fnCOMB()
+{
+  if (pila.stackSize() > 0)
+  {
+    lastX = digitNUM;
+    long r = (long) digitNUM;
+    long n = (long) pila.pop();
+    long nCr = calc_nPr(n, r);
+    for(int i=1; i<(r+1); i++)
+    {
+      nCr = nCr / i;
+    }
+    digitNUM = (double) nCr;
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+  else { outputSTR = "Combinations: two numbers required."; }
 }
 
 //  ---------- STATISTIC FUNCTIONS ----------
@@ -1377,7 +1215,7 @@ void fnCRAMER()
       a11 = pila.pop();
 
       // solve system
-      double[] solution = solver.solve2x2
+      double[] solution = cramer.solve2x2
       (a11, a12,
        a21, a22,
         k1,  k2);
@@ -1409,7 +1247,7 @@ void fnCRAMER()
       a11 = pila.pop();
 
       // solve system
-      double[] solution = solver.solve3x3
+      double[] solution = cramer.solve3x3
       (a11, a12, a13,
        a21, a22, a23,
        a31, a32, a33,
@@ -1453,7 +1291,7 @@ void fnCRAMER()
       a11 = pila.pop();
 
       // solve system
-      double[] solution = solver.solve4x4
+      double[] solution = cramer.solve4x4
       (a11, a12, a13, a14,
        a21, a22, a23, a24,
        a31, a32, a33, a34,
@@ -1510,7 +1348,7 @@ void fnCRAMER()
       a11 = pila.pop();
 
       // solve system
-      double[] solution = solver.solve5x5
+      double[] solution = cramer.solve5x5
       (a11, a12, a13, a14, a15,
        a21, a22, a23, a24, a25,
        a31, a32, a33, a34, a35,
@@ -1536,10 +1374,10 @@ void fnCRAMER()
   else { outputSTR = "Linear System: too few numbers."; }
 }
 
-// Solve Linear Equation System 2x2, 3x3, 4x4, 5x5 with Cramer method
-SolveLE solver = new SolveLE();
+// Risolve Sistemi Lineari di Equazioni con il metodo di Cramer (2x2, 3x3, 4x4, 5x5)
+SisLin cramer = new SisLin();
 
-class SolveLE
+class SisLin
 {
 // ------------------- SOLVE 2x2 -------------------
  double[] solve2x2(double a11, double a12,
@@ -1904,12 +1742,12 @@ void fnHORNER()
       return;
     }
     double eval = Horner(grado, x, coeff);
-    //double eval=0.0;
-    for(int i=grado; i >= 0; i--)
-    {
-      pila.push(coeff[i]);
-    }
-    pila.push((double) grado);
+    // Push input data on stack
+    //for(int i=grado; i >= 0; i--)
+    //{
+    //  pila.push(coeff[i]);
+    //}
+    //pila.push((double) grado);
     digitNUM = eval;
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
@@ -1923,7 +1761,7 @@ double Horner(int grado, double x, double[] coeff)
   double eval = 0.0;
   for(int i=grado; i >= 0; i--)
   {
-      eval = eval*x + coeff[i];
+    eval = eval*x + coeff[i];
   }
   return eval;
 }

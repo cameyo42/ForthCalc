@@ -536,4 +536,61 @@ void fnFLIPS()
     isBlocked = false;
   }
 }
+//------------------------------------------------------------
+// Memory function
+void fnSTO1() { mem1 = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
+void fnSTO2() { mem2 = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
+void fnSTO3() { mem3 = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
+void fnSTO4() { mem4 = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
+void fnSTO5() { mem5 = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
 
+void fnRCL1()
+{
+  lastX = digitNUM;
+  if (!isBlocked && isResult) { pila.push(digitNUM); }
+  //pila.push(digitNUM);
+  digitNUM = mem1;
+  outputSTR = String.valueOf(digitNUM);
+  isResult = true;
+  isBlocked = false;
+}
+void fnRCL2()
+{
+  lastX = digitNUM;
+  if (!isBlocked && isResult) { pila.push(digitNUM); }
+  //pila.push(digitNUM);
+  digitNUM = mem2;
+  outputSTR = String.valueOf(digitNUM);
+  isResult = true;
+  isBlocked = false;
+}
+void fnRCL3()
+{
+  lastX = digitNUM;
+  if (!isBlocked && isResult) { pila.push(digitNUM); }
+  //pila.push(digitNUM);
+  digitNUM = mem3;
+  outputSTR = String.valueOf(digitNUM);
+  isResult = true;
+  isBlocked = false;
+}
+void fnRCL4()
+{
+  lastX = digitNUM;
+  if (!isBlocked && isResult) { pila.push(digitNUM); }
+  //pila.push(digitNUM);
+  digitNUM = mem4;
+  outputSTR = String.valueOf(digitNUM);
+  isResult = true;
+  isBlocked = false;
+}
+void fnRCL5()
+{
+  lastX = digitNUM;
+  if (!isBlocked && isResult) { pila.push(digitNUM); }
+  //pila.push(digitNUM);
+  digitNUM = mem5;
+  outputSTR = String.valueOf(digitNUM);
+  isResult = true;
+  isBlocked = false;
+}

@@ -149,9 +149,8 @@ void setGUI()
   btn8     = new Button(baseX+stepX,   baseY, btn8_IMG, "", color(240), "fn8");
   btn9     = new Button(baseX+stepX*2, baseY, btn9_IMG, "", color(240), "fn9");
   btnDIV   = new Button(baseX+stepX*3, baseY, btnDIV_IMG, "", color(240), "fnDIV");
-  //btnCLS   = new Button(baseX+stepX*5, baseY, btnCLS_IMG, "", color(240), "fnCLS");
   btnEEX   = new Button(baseX+stepX*4, baseY, btnEEX_IMG, "", color(240), "fnEEX");
-  btnFIX   = new Button(baseX+stepX*5, baseY, btnFIX_IMG, "", color(240), "fnFIX");
+  btnBACK  = new Button(baseX+stepX*5, baseY, btnBACK_IMG, "", color(240), "backspacePressed");
 
   btn4     = new Button(baseX,         baseY+stepY, btn4_IMG, "", color(240), "fn4");
   btn5     = new Button(baseX+stepX,   baseY+stepY, btn5_IMG, "", color(240), "fn5");
@@ -164,7 +163,7 @@ void setGUI()
   btn2     = new Button(baseX+stepX,   baseY+stepY*2, btn2_IMG, "", color(240), "fn2");
   btn3     = new Button(baseX+stepX*2, baseY+stepY*2, btn3_IMG, "", color(240), "fn3");
   btnMINUS = new Button(baseX+stepX*3, baseY+stepY*2, btnMINUS_IMG, "", color(240), "fnMINUS");
-  btnBACK  = new Button(baseX+stepX*5, baseY+stepY*2, btnBACK_IMG, "", color(240), "backspacePressed");
+  btnCLS   = new Button(baseX+stepX*5, baseY+stepY*2, btnCLS_IMG, "", color(240), "fnCLS");
 
   btn0     = new Button(baseX,         baseY+stepY*3, btn0_IMG, "", color(240), "fn0");
   btnDOT   = new Button(baseX+stepX,   baseY+stepY*3, btnDOT_IMG, "", color(240), "dotPressed");
@@ -250,12 +249,14 @@ void setGUI()
   stepX = 40;
   stepY = 36;
   btnFACT      = new Button(baseX,         baseY, btnFACT_IMG, "", color(240), "fnFACT");
-  btnBINOMIAL  = new Button(baseX+stepX,   baseY, btnBINOMIAL_IMG, "", color(240), "fnBINOMIAL");
+  btnFIBO      = new Button(baseX+stepX,   baseY, btnFIBO_IMG, "", color(240), "fnFIBO");
+  //btnBINOMIAL  = new Button(baseX+stepX,   baseY, btnBINOMIAL_IMG, "", color(240), "fnBINOMIAL");
   btnPERM      = new Button(baseX+stepX*2, baseY, btnPERM_IMG, "", color(240), "fnPERM");
   btnCOMB      = new Button(baseX+stepX*3, baseY, btnCOMB_IMG, "", color(240), "fnCOMB");
-  btnFIBO      = new Button(baseX+stepX*4, baseY, btnFIBO_IMG, "", color(240), "fnFIBO");
-  btnSTAT      = new Button(baseX+stepX*5, baseY, btnSTAT_IMG, "", color(240), "fnSTAT");
-  btnRND       = new Button(baseX+stepX*6, baseY, btnRND_IMG, "", color(240), "fnRND");
+  btnSTAT      = new Button(baseX+stepX*4, baseY, btnSTAT_IMG, "", color(240), "fnSTAT");
+  //btnRND       = new Button(baseX+stepX*5, baseY, btnRND_IMG, "", color(240), "fnRND");
+  btnRND       = new Button(baseX+stepX*5, baseY, btnRND_IMG, "", color(240), "fnRound");
+  btnFIX       = new Button(baseX+stepX*6, baseY, btnFIX_IMG, "", color(240), "fnFIX");  
 
   // Forth buttons
   baseX = 8;

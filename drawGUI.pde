@@ -70,8 +70,8 @@ String formatNumber(double n)
     //else { sym.setExponentSeparator("e+"); }
     //if ((n > minEps && n < 0 ) || (n > 0.0 && n < maxEps)) { sym.setExponentSeparator("x10^"); }
     //else { sym.setExponentSeparator("x10^+"); }
-    if ((n > minEps && n < 0 ) || (n > 0.0 && n < maxEps)) { sym.setExponentSeparator("e"); }
-    else { sym.setExponentSeparator("e+"); }    
+    if ((n > minEps && n < 0 ) || (n > 0.0 && n < maxEps)) { sym.setExponentSeparator(" E"); }
+    else { sym.setExponentSeparator(" E+"); }    
     df = new DecimalFormat("#.################E0", sym);
   }
   else
@@ -111,7 +111,7 @@ void showGUI()
   btn8.show();
   btn9.show();
   btnDIV.show();
-  //btnCLS.show();
+  btnCLS.show();
   btnEEX.show();
   btnFIX.show();
 
@@ -184,11 +184,11 @@ void showGUI()
   btnHORNER.show();
 
   btnFACT.show();
-  btnBINOMIAL.show();
+  btnFIBO.show();
+  //btnBINOMIAL.show();
   btnPERM.show();
   btnCOMB.show();
   btnSTAT.show();
-  btnFIBO.show();
   btnRND.show();
 
   btnFRACTADD.show();

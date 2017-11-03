@@ -179,9 +179,9 @@ void setup()
     surface.setIcon(icon);
   }
   background(backCol);
-  // load click sound from the /data folder
-  click = new SoundFile(this, "click.wav");
   sound = true;
+  // load click sound from the /data folder
+  if (sound) { click = new SoundFile(this, "click.wav"); }
   // load fonts
   font = createFont("Consolas Bold", 12);
   digitFont = createFont("wwwDigital.ttf", 30); // with Infinity and NaN
@@ -250,7 +250,7 @@ void mousePressed()
   btn8.onClick();
   btn9.onClick();
   btnDIV.onClick();
-  //btnCLS.onClick();
+  btnCLS.onClick();
   btnEEX.onClick();
   btnFIX.onClick();
 
@@ -334,10 +334,10 @@ void mousePressed()
   btnTRIANGLE.onClick();
 
   btnFACT.onClick();
-  btnBINOMIAL.onClick();
+  btnFIBO.onClick();
+  //btnBINOMIAL.onClick();
   btnPERM.onClick();
   btnCOMB.onClick();
-  btnFIBO.onClick();
   btnSTAT.onClick();
   btnRND.onClick();
 

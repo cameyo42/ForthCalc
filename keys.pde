@@ -7,7 +7,7 @@ void keyPressed()
   println((int)key, hex(key), keyCode);
   
   // play sound
-  if (sound) { click.play(); }
+//  if (sound) { click.play(); }
 
   if (key == '=') // test
   {
