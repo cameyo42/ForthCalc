@@ -113,7 +113,6 @@ void showGUI()
   btnDIV.show();
   btnCLS.show();
   btnEEX.show();
-  btnFIX.show();
 
   btn4.show();
   btn5.show();
@@ -189,7 +188,9 @@ void showGUI()
   btnPERM.show();
   btnCOMB.show();
   btnSTAT.show();
-  btnRND.show();
+  btnFIX.show();
+  btnROUND.show();
+  // btnRND.show();
 
   btnFRACTADD.show();
   btnFRACTSUB.show();

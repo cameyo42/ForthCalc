@@ -591,7 +591,7 @@ void fnRND()
   isBlocked = false;
 }
 
-void fnRound()
+void fnROUND()
 { 
   if (pila.stackSize() > 0)
   {

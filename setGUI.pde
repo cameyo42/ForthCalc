@@ -63,12 +63,12 @@ void setGUI()
   btnINT_IMG = guiIMG.get(0, 99, 37, 33);
   btnFRAC_IMG = guiIMG.get(37, 99, 37, 33);
   btnFACT_IMG = guiIMG.get(74, 99, 37, 33);
-  btnRND_IMG = guiIMG.get(111, 99, 37, 33);
+  //btnRND_IMG = guiIMG.get(111, 99, 37, 33);
   btnDMS_IMG = guiIMG.get(148, 99, 37, 33);
   btnDD_IMG = guiIMG.get(185, 99, 37, 33);
   btnROOTS_IMG = guiIMG.get(222, 99, 37, 33);
-  btnDEG_IMG = guiIMG.get(259, 99, 37, 33);
-  btnRAD_IMG = guiIMG.get(296, 99, 37, 33);
+  //btnDEG_IMG = guiIMG.get(259, 99, 37, 33);
+  //btnRAD_IMG = guiIMG.get(296, 99, 37, 33);
   btnQEQ_IMG = guiIMG.get(333, 99, 37, 33);
   btnGCD_IMG = guiIMG.get(370, 99, 37, 33);
   btnLCM_IMG = guiIMG.get(407, 99, 37, 33);
@@ -77,12 +77,12 @@ void setGUI()
   btnRECT_IMG = guiIMG.get(518, 99, 37, 33);
   btnPOLAR_IMG = guiIMG.get(555, 99, 37, 33);
 
-  btnBINOMIAL_IMG = guiIMG.get(0, 612, 37, 33);
+  //btnBINOMIAL_IMG = guiIMG.get(0, 612, 37, 33);
   btnPERM_IMG = guiIMG.get(37, 612, 37, 33);
   btnCOMB_IMG = guiIMG.get(74, 612, 37, 33);
   btnFIBO_IMG = guiIMG.get(111, 612, 37, 33);
   btnSTAT_IMG = guiIMG.get(148, 612, 37, 33);
-  btnABS_IMG  = guiIMG.get(185, 612, 37, 33);
+  //btnABS_IMG  = guiIMG.get(185, 612, 37, 33);
   btnFRACTADD_IMG = guiIMG.get(222, 612, 37, 33);
   btnFRACTSUB_IMG = guiIMG.get(259, 612, 37, 33);
   btnFRACTMUL_IMG = guiIMG.get(296, 612, 37, 33);
@@ -94,6 +94,7 @@ void setGUI()
   btnCBRT_IMG     = guiIMG.get(518, 612, 37, 33);
   btnEEX_IMG      = guiIMG.get(555, 612, 37, 33);
   btnFRACTGEN_IMG = guiIMG.get(592, 612, 37, 33);
+  btnROUND_IMG = guiIMG.get(629, 612, 37, 33);
 
   // Forth Image Buttons
   btnDUP_IMG = guiIMG.get(0, 513, 55, 33);
@@ -113,7 +114,7 @@ void setGUI()
 
   btnCOPYS_IMG = guiIMG.get(0, 579, 55, 33);
   btnPASTES_IMG = guiIMG.get(55, 579, 55, 33);
-  btnTWINS_IMG = guiIMG.get(110, 579, 55, 33);
+  //btnTWINS_IMG = guiIMG.get(110, 579, 55, 33);
   btnPICKS_IMG = guiIMG.get(165, 579, 55, 33);
   btnROLLS_IMG = guiIMG.get(220, 579, 55, 33);
   btnRUPS_IMG = guiIMG.get(275, 579, 55, 33);
@@ -231,7 +232,6 @@ void setGUI()
   btnQEQ       = new Button(baseX+stepX*4, baseY, btnQEQ_IMG, "", color(240), "fnQUADRATIC");
   btnCEQ       = new Button(baseX+stepX*5, baseY, btnCEQ_IMG, "", color(240), "fnCUBIC");
   btnHORNER    = new Button(baseX+stepX*6, baseY, btnHORNER_IMG, "", color(240), "fnHORNER");
-
   //btnDEG   = new Button(baseX+stepX*5, baseY, btnDEG_IMG, "", color(240), "fnINDEG");
   //btnRAD   = new Button(baseX+stepX*6, baseY, btnRAD_IMG, "", color(240), "fnINRAD");
   
@@ -255,7 +255,7 @@ void setGUI()
   btnCOMB      = new Button(baseX+stepX*3, baseY, btnCOMB_IMG, "", color(240), "fnCOMB");
   btnSTAT      = new Button(baseX+stepX*4, baseY, btnSTAT_IMG, "", color(240), "fnSTAT");
   //btnRND       = new Button(baseX+stepX*5, baseY, btnRND_IMG, "", color(240), "fnRND");
-  btnRND       = new Button(baseX+stepX*5, baseY, btnRND_IMG, "", color(240), "fnRound");
+  btnROUND     = new Button(baseX+stepX*5, baseY, btnROUND_IMG, "", color(240), "fnROUND");
   btnFIX       = new Button(baseX+stepX*6, baseY, btnFIX_IMG, "", color(240), "fnFIX");  
 
   // Forth buttons
