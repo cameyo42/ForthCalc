@@ -184,7 +184,7 @@ void setup()
   background(backCol);
   sound = true;
   // load click sound from the /data folder
-  if (sound) { click = new SoundFile(this, "click.wav"); }
+  click = new SoundFile(this, "click.wav");
   // load fonts
   font = createFont("Consolas Bold", 12);
   digitFont = createFont("wwwDigital.ttf", 30); // with Infinity and NaN
@@ -219,7 +219,7 @@ void init()
 //*********************************
 void draw()
 {
-  println("Redraw: ",frameCount);
+  //println("Redraw: ",frameCount);
   if (start)
   {
     background(backCol);

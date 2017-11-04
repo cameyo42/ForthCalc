@@ -4,17 +4,18 @@ void keyPressed()
   loop();
   start = true;
   // discover keys....
-  println((int)key, hex(key), keyCode);
+  // println((int)key, hex(key), keyCode);
   
   // play sound
-//  if (sound) { click.play(); }
+  if (sound) { click.play(); }
 
-  if (key == '=') // test
+  if (key == ']') // test
   {
     //fnTRIANGLE();
-    //fnCUBIC();
-    //fnFRACTgen();
   }
+  
+  // Sound keys (on/off)
+  if (key == '=') { sound = !sound; }  
   
   // Create number with exponent
   if (key == 'l' || key == 'L') { fnEEX(); }  
