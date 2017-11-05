@@ -1669,10 +1669,8 @@ void fnFRACTgen()
 
     int cifrePeriodo = (int) Math.abs(digitNUM);
     double numero = pila.pop();
-    df = new DecimalFormat("#,##0.0################");
+    df = new DecimalFormat("#,##0.0######################");
     numero$ = df.format(numero);
-    //numero$ = String.valueOf(numero);
-    println(numero$);
     if (cifrePeriodo > (numero$.length() - numero$.indexOf('.') - 1))
     {
       pila.push(numero);
@@ -1688,7 +1686,6 @@ void fnFRACTgen()
       i$ = numero$.substring(0, numero$.indexOf('.'));
       a$ = numero$.substring(numero$.indexOf('.') + 1, numero$.length() - cifrePeriodo);
       p$ = numero$.substring(numero$.length() - cifrePeriodo, numero$.length());
-      println(i$,a$,p$);
       String all$ = i$ + a$ + p$;
       double allNumber = Double.valueOf(all$);
       String sub$ = i$ + a$;
@@ -1700,7 +1697,6 @@ void fnFRACTgen()
       String denom$ = "";
       for(int i = 0; i < p$.length(); i++) { denom$ = denom$ + "9"; };
       for(int i = 0; i < a$.length(); i++) { denom$ = denom$ + "0"; };
-      println(denom$);
       denominatore = Double.valueOf(denom$);
       // Semplifica numeratore/denominatore
       double n1 = numeratore;
