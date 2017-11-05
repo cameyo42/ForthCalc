@@ -76,9 +76,16 @@ String formatNumber(double n)
   }
   else
   {
-    if (numFloating == -1)
+    if (numFloating == -1) // real format
     {
       df = new DecimalFormat("#,##0.0################");
+    }
+    else if (numFloating == -2) // hour minute seconds format
+    {
+      //df = new DecimalFormat("00,00");
+      df = new DecimalFormat("##,##");
+      //DecimalFormat df = new DecimalFormat("00"); // "0" means don't omit leading zero
+
     }
     else
     switch(numFloating)

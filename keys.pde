@@ -13,14 +13,14 @@ void keyPressed()
   {
     //fnTRIANGLE();
     //fnCXPOW();
-    fnTADD();
+    fnTSUB();
   }
   
   if (key == '[') // test
   {
     //fnTRIANGLE();
     //fnCXINV();
-    fnCXMUL();
+    fnTADD();
   }
   if (key == ';') // test
   {

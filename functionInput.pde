@@ -5,7 +5,7 @@ void fnINRAD() { inDegrees = false; }
 
 void fnFIX()
 {
-  if ((digitNUM >= -1.0) && (digitNUM < 10.0) && ((int)digitNUM == digitNUM))
+  if ((digitNUM >= -2.0) && (digitNUM < 10.0) && ((int)digitNUM == digitNUM))
   {
     int num = (int) digitNUM;
     numFloating = num;

@@ -182,7 +182,7 @@ void setup()
     surface.setIcon(icon);
   }
   background(backCol);
-  sound = true;
+  sound = false;
   // load click sound from the /data folder
   click = new SoundFile(this, "click.wav");
   // load fonts
