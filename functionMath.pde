@@ -839,7 +839,8 @@ void fnPOLAR()
     double y = digitNUM;
     double x = pila.pop();
     double r = Math.sqrt(x*x + y*y);
-    double theta = Math.atan(y/x);
+    double theta = Math.atan2(y,x);
+    //double theta = Math.acos(x/r);
     if (inDegrees) { theta = Math.toDegrees(theta); }
     pila.push(theta);
     digitNUM = r;
@@ -1661,15 +1662,17 @@ void fnFRACTgen()
   if (pila.stackSize() > 0)
   {
     lastX = digitNUM;
-    int numeratore = 0;
-    int denominatore = 0;
+    double numeratore = 0;
+    double denominatore = 0;
     String numero$="";
     String i$="", a$="", p$="";
 
     int cifrePeriodo = (int) Math.abs(digitNUM);
     double numero = pila.pop();
-
-    numero$ = String.valueOf(numero);
+    df = new DecimalFormat("#,##0.0################");
+    numero$ = df.format(numero);
+    //numero$ = String.valueOf(numero);
+    println(numero$);
     if (cifrePeriodo > (numero$.length() - numero$.indexOf('.') - 1))
     {
       pila.push(numero);
@@ -1685,11 +1688,11 @@ void fnFRACTgen()
       i$ = numero$.substring(0, numero$.indexOf('.'));
       a$ = numero$.substring(numero$.indexOf('.') + 1, numero$.length() - cifrePeriodo);
       p$ = numero$.substring(numero$.length() - cifrePeriodo, numero$.length());
-      //println(i$,a$,p$);
+      println(i$,a$,p$);
       String all$ = i$ + a$ + p$;
-      int allNumber = Integer.valueOf(all$);
+      double allNumber = Double.valueOf(all$);
       String sub$ = i$ + a$;
-      int subNumber = Integer.valueOf(sub$);
+      double subNumber = Double.valueOf(sub$);
       // Calcolo numeratore
       numeratore = allNumber - subNumber;
       if (numero < 0) { numeratore = -numeratore; }
@@ -1697,11 +1700,12 @@ void fnFRACTgen()
       String denom$ = "";
       for(int i = 0; i < p$.length(); i++) { denom$ = denom$ + "9"; };
       for(int i = 0; i < a$.length(); i++) { denom$ = denom$ + "0"; };
-      denominatore = Integer.valueOf(denom$);
+      println(denom$);
+      denominatore = Double.valueOf(denom$);
       // Semplifica numeratore/denominatore
-      int n1=numeratore;
-      int n2=denominatore;
-      int temp;
+      double n1 = numeratore;
+      double n2 = denominatore;
+      double temp;
       while (n2!=0)
       {
         temp = n2;

@@ -12,6 +12,21 @@ void keyPressed()
   if (key == ']') // test
   {
     //fnTRIANGLE();
+    fnCXPOW();
+    //fnCXMUL();
+  }
+  
+  if (key == '[') // test
+  {
+    //fnTRIANGLE();
+    //fnCXINV();
+    fnCXMUL();
+  }
+  if (key == ';') // test
+  {
+    //fnTRIANGLE();
+    fnCXDIV();
+    //fnCXMUL();
   }
   
   // Sound keys (on/off)
