@@ -12,8 +12,8 @@ void keyPressed()
   if (key == ']') // test
   {
     //fnTRIANGLE();
-    fnCXPOW();
-    //fnCXMUL();
+    //fnCXPOW();
+    fnTADD();
   }
   
   if (key == '[') // test
@@ -144,5 +144,5 @@ void keyPressed()
   if (key=='z'||key=='Z') { saveImage(); }
 
   // print stack (console)
-  if (key == ']') { println(digitNUM); pila.printStack(); }  
+  if (key == '`') { println(digitNUM); pila.printStack(); }  
 }
