@@ -11,7 +11,7 @@ void fnTRIANGLE()
 {
   if (pila.stackSize() > 4)
   {
-    // get variables (a,b,c,alfa,beta,gamma) from stack...
+    // get variables (a,b,c,alfa,beta,gamma) from stack...and make a copy
     gamma = digitNUM;  double ggamma = gamma;
     beta = pila.pop(); double bbeta = beta;
     alfa = pila.pop(); double aalfa = alfa;
