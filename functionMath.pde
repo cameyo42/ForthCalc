@@ -509,27 +509,38 @@ void fnPHI()
 void fnINT()
 {
   lastX = digitNUM;
-  long iPart = (long) digitNUM;
-  double fPart = digitNUM - iPart;
-  double integralPart = (double) iPart;
-  double fractionalPart = fPart;
-  digitNUM = integralPart;
-  outputSTR = String.valueOf(digitNUM);
-  isResult = true;
-  isBlocked = false;
+  long maxVALUE = 999999999999999L;
+  if (digitNUM < maxVALUE)
+  {  
+    long iPart = (long) digitNUM;
+    double fPart = digitNUM - iPart;
+    double integralPart = (double) iPart;
+    double fractionalPart = fPart;
+    digitNUM = integralPart;
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+  else { outputSTR = "Int: number too high (+-999999999999999)"; }
 }
 
 void fnFRAC()
 {
-  lastX = digitNUM;
-  long iPart = (long) digitNUM;
-  double fPart = digitNUM - iPart;
-  double integralPart = (double) iPart;
-  double fractionalPart = fPart;
-  digitNUM = fractionalPart;
-  outputSTR = String.valueOf(digitNUM);
-  isResult = true;
-  isBlocked = false;
+  long maxVALUE = 999999999999999L;
+  if (digitNUM < maxVALUE)
+  {  
+    lastX = digitNUM;
+    long iPart = (long) digitNUM;
+    double fPart = digitNUM - iPart;
+    println(fPart);
+    double integralPart = (double) iPart;
+    double fractionalPart = fPart;
+    digitNUM = fractionalPart;
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+  else { outputSTR = "Frac: number too high (+-999999999999999)"; }    
 }
 
 void fnDMS() // from decimal degrees to degrees minute second
@@ -782,7 +793,7 @@ long calcLCM2(long p, long q)
 void fnFACTORIZE()
 {
   // max long value: 9,223,372,036,854,775,807
-  long maxVALUE = 999999999999L;
+  long maxVALUE = 999999999999999L;
   if (digitNUM < maxVALUE)
   {
     lastX = digitNUM;
