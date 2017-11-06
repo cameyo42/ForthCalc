@@ -447,10 +447,11 @@ void fnloadFILE()
   {
     pila.clearStack();
     String lista[] = loadStrings(file);
-    int items = lista.length - 1;
+    //int items = lista.length - 1;
+    int items = lista.length;
     for (int i=items-1; i >= 0; i--)
     {
-      if (lista[i]!="" && lista[i]!=null)
+      if (!lista[i].equals("") && !lista[i].equals(null))
       {
         double val = Double.valueOf(lista[i]);
         pila.push(val);
@@ -489,11 +490,14 @@ void fnsaveFILE()
   lista = numero + "|";
   int items = pila.stackSize();
   if (items > maxSlot) { items = maxSlot; }
-  for (int i=0; i < items; i++)
+  for (int i=0; i < items-1; i++)
   {
     numero = String.valueOf(pila.getItem(i)) + "|";
     lista = lista + numero;
   }
+  numero = String.valueOf(pila.getItem(items-1));
+  lista = lista + numero;
+  println(lista);
   String[] outLST = split(lista, "|");
   String filename = newFilename(2) + ".lst";
   saveStrings(dataPath(filename), outLST);
