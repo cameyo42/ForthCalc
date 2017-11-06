@@ -511,7 +511,7 @@ void fnINT()
   lastX = digitNUM;
   long maxVALUE = 999999999999999L;
   if (digitNUM < maxVALUE)
-  {  
+  {
     long iPart = (long) digitNUM;
     double fPart = digitNUM - iPart;
     double integralPart = (double) iPart;
@@ -528,7 +528,7 @@ void fnFRAC()
 {
   long maxVALUE = 999999999999999L;
   if (digitNUM < maxVALUE)
-  {  
+  {
     lastX = digitNUM;
     long iPart = (long) digitNUM;
     double fPart = digitNUM - iPart;
@@ -540,7 +540,7 @@ void fnFRAC()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Frac: number too high (+-999999999999999)"; }    
+  else { outputSTR = "Frac: number too high (+-999999999999999)"; }
 }
 
 void fnDMS() // from decimal degrees to degrees minute second
@@ -603,7 +603,7 @@ void fnRND()
 }
 
 void fnROUND()
-{ 
+{
   if (pila.stackSize() > 0)
   {
     if ((digitNUM >= 0.0) && (digitNUM < 10.0) && ((int)digitNUM == digitNUM))
@@ -617,11 +617,11 @@ void fnROUND()
       }
       outputSTR = String.valueOf(digitNUM);
       isResult = true;
-      isBlocked = false;      
+      isBlocked = false;
     }
     else { outputSTR = "Round: integer number required [0, 9]"; }
-  } 
-  else { outputSTR = "Round: two number required."; }  
+  }
+  else { outputSTR = "Round: two number required."; }
 }
 
 // ---------- ALGEBRIC FUNCTIONS ----------
@@ -913,7 +913,7 @@ void fnFACT()
     String filename = "fact" + n + ".txt";
     saveStrings(dataPath(filename), data);
     cursor(ARROW);
-    
+
     // Update window (write is another thread)
     //background(backCol);
     //drawLCD();
@@ -970,14 +970,14 @@ void fnFIBO()
     saveStrings(dataPath(filename), data);
     //println(r);
     cursor(ARROW);
-    
+
     // Update window (write is another thread)
     //background(backCol);
     //drawLCD();
     //showGUI();
     //if (viewShortcuts) { image(short_IMG, 0, 0); }
     loop();
-    
+
   }
   else { outputSTR = "Fibonacci: positive number required."; }
 }
@@ -1026,7 +1026,7 @@ long calcBinomial(int n, int k)
     {
       binomial[i][j] = binomial[i-1][j-1] + binomial[i-1][j];
     }
-  } 
+  }
   return(binomial[n][k]);
 }
 
@@ -1034,10 +1034,10 @@ long calcBinomial(int n, int k)
 // nPr = n! / (n-r)!
 // numero di gruppi con r elementi scelti da n elementi (con diverso ordinamento)
 // Permutation:
-// Def: The number of possibilities for choosing an ordered set of r objects (a permutation) from a total of n objects. 
+// Def: The number of possibilities for choosing an ordered set of r objects (a permutation) from a total of n objects.
 // Definition: nPr(n,r)=n!/(n−r)!nPr(n,r)=n!/(n−r)!
-// Assume there are three persons namely A, B and C in the park. 
-// But there is only two seats available for them. 
+// Assume there are three persons namely A, B and C in the park.
+// But there is only two seats available for them.
 // Then possible ways of people can sit over the seat using permutation is:
 // {AB, BA, AC, CA, BC, CB} = 6 ways persons can sit on that seats.
 // nPr(n,r) = n!/(n−r)! = 6 ways
@@ -1070,7 +1070,7 @@ long calc_nPr(long n, long r)
 // nCr = n!/((n-r)!*r!) = nPr / r!
 // numero di gruppi con r elementi scelti da n elementi (indipendenti dall'ordinamento)
 // Combination:
-// Def: The number of different, unordered combinations of r objects from a set of n objects. 
+// Def: The number of different, unordered combinations of r objects from a set of n objects.
 // Definition: nCr(n,r) = nPr(n,r)/r! = n!/r!(n−r)!
 // Where combination says AB and BA are same since order is doesn't matters.
 // So {AB, AC, BC} = 3 (combination) ways persons can sit on that seats

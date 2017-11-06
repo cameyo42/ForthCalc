@@ -174,17 +174,17 @@ void fnTSUB()
       while (mm1 >= 60) { mm1 = mm1 - 60; hh1 = hh1 + 1; }
       while (ss2 >= 60) { ss2 = ss2 - 60; mm2 = mm2 + 1; }
       while (mm2 >= 60) { mm2 = mm2 - 60; hh2 = hh2 + 1; }
-      
+
       // find bigger time
       boolean scambio = false;
       //println((ss1 + mm1*1000 + hh1 *10000),(ss2 + mm2*1000 + hh2 *10000));
-      if (ss1 + mm1*1000 + hh1 *10000 < ss2 + mm2*1000 + hh2 *10000) 
-      { 
+      if (ss1 + mm1*1000 + hh1 *10000 < ss2 + mm2*1000 + hh2 *10000)
+      {
         long temp = hh1; hh1 = hh2; hh2 = temp;
         temp = mm1; mm1 = mm2; mm2 = temp;
         temp = ss1; ss1 = ss2; ss2 = temp;
         scambio = true;
-        
+
       }
       //println("t1=",hh1,mm1,ss1);
       //println("t2=",hh2,mm2,ss2);
@@ -206,7 +206,7 @@ void fnTSUB()
       double res = Double.valueOf(res$);
       if (scambio) { res = -res; };
       println(res);
-// The result of TIME('11:02:26') - '00:32:56' is 102930 (a duration of 10 hours, 29 minutes, and 30 seconds).
+      // The result of TIME('11:02:26') - '00:32:56' is 102930 (a duration of 10 hours, 29 minutes, and 30 seconds).
       digitNUM = res;
       outputSTR = String.valueOf(digitNUM);
       isResult = true;

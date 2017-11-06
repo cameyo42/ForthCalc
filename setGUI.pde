@@ -95,7 +95,7 @@ void setGUI()
   btnEEX_IMG      = guiIMG.get(555, 612, 37, 33);
   btnFRACTGEN_IMG = guiIMG.get(592, 612, 37, 33);
   btnROUND_IMG = guiIMG.get(629, 612, 37, 33);
-  
+
   // columns buttons
   btnCXADD_IMG = guiIMG.get(0, 645, 37, 33);
   btnCXSUB_IMG = guiIMG.get(37, 645, 37, 33);
@@ -129,9 +129,9 @@ void setGUI()
   btnROLLS_IMG = guiIMG.get(220, 579, 55, 33);
   btnRUPS_IMG = guiIMG.get(275, 579, 55, 33);
   btnRDOWNS_IMG = guiIMG.get(330, 579, 55, 33);
-  
+
   btnCLEAR_IMG = guiIMG.get(385, 546, 55, 33);
-  
+
   btnSAVE_IMG = guiIMG.get(385, 579, 55, 33);
   btnLOAD_IMG = guiIMG.get(440, 579, 55, 33);
   btnFLIPS_IMG = guiIMG.get(495, 579, 55, 33);
@@ -150,7 +150,7 @@ void setGUI()
   btnRCL5_IMG = guiIMG.get(333, 546, 37, 33);
 
   //saveButtons(); // for manual
-  
+
 // Define buttons
   int baseX = 620;
   int baseY = 16;
@@ -244,7 +244,7 @@ void setGUI()
   btnHORNER    = new Button(baseX+stepX*6, baseY, btnHORNER_IMG, "", color(240), "fnHORNER");
   //btnDEG   = new Button(baseX+stepX*5, baseY, btnDEG_IMG, "", color(240), "fnINDEG");
   //btnRAD   = new Button(baseX+stepX*6, baseY, btnRAD_IMG, "", color(240), "fnINRAD");
-  
+
   btnFRACTADD  = new Button(baseX,         baseY+stepY, btnFRACTADD_IMG, "", color(240), "fnFRACTadd");
   btnFRACTSUB  = new Button(baseX+stepX,   baseY+stepY, btnFRACTSUB_IMG, "", color(240), "fnFRACTsub");
   btnFRACTMUL  = new Button(baseX+stepX*2, baseY+stepY, btnFRACTMUL_IMG, "", color(240), "fnFRACTmul");
@@ -266,14 +266,14 @@ void setGUI()
   btnSTAT      = new Button(baseX+stepX*4, baseY, btnSTAT_IMG, "", color(240), "fnSTAT");
   //btnRND       = new Button(baseX+stepX*5, baseY, btnRND_IMG, "", color(240), "fnRND");
   btnROUND     = new Button(baseX+stepX*5, baseY, btnROUND_IMG, "", color(240), "fnROUND");
-  btnFIX       = new Button(baseX+stepX*6, baseY, btnFIX_IMG, "", color(240), "fnFIX");  
-  
+  btnFIX       = new Button(baseX+stepX*6, baseY, btnFIX_IMG, "", color(240), "fnFIX");
+
   // Column buttons
   baseX = 909;
   baseY = 16;
   stepX = 44;
-  stepY = 36;  
-  
+  stepY = 36;
+
   btnCXADD = new Button(baseX,       baseY, btnCXADD_IMG, "", color(240), "fnCXADD");
   btnCXSUB = new Button(baseX+stepX, baseY, btnCXSUB_IMG, "", color(240), "fnCXSUB");
   btnCXMUL = new Button(baseX,       baseY+stepY, btnCXMUL_IMG, "", color(240), "fnCXMUL");
@@ -295,7 +295,7 @@ void setGUI()
   btnROT   = new Button(baseX+stepX*4, baseY, btnROT_IMG, "", color(240), "fnROT");
   btnNIP   = new Button(baseX+stepX*5, baseY, btnNIP_IMG, "", color(240), "fnNIP");
   btnTUCK  = new Button(baseX+stepX*6, baseY, btnTUCK_IMG, "", color(240), "fnTUCK");
-  
+
   btn2DUP  = new Button(baseX,         baseY+stepY, btn2DUP_IMG, "", color(240), "fn2DUP");
   btn2DROP = new Button(baseX+stepX,   baseY+stepY, btn2DROP_IMG, "", color(240), "fn2DROP");
   btn2SWAP = new Button(baseX+stepX*2, baseY+stepY, btn2SWAP_IMG, "", color(240), "fn2SWAP");
@@ -303,19 +303,19 @@ void setGUI()
   btn2ROT  = new Button(baseX+stepX*4, baseY+stepY, btn2ROT_IMG, "", color(240), "fn2ROT");
   btn2NIP  = new Button(baseX+stepX*5, baseY+stepY, btn2NIP_IMG, "", color(240), "fn2NIP");
   btn2TUCK = new Button(baseX+stepX*6, baseY+stepY, btn2TUCK_IMG, "", color(240), "fn2TUCK");
-  
+
   btnCOPYS  = new Button(baseX,         baseY+stepY*2, btnCOPYS_IMG, "", color(240), "fnCOPYS");
   btnPASTES = new Button(baseX+stepX,   baseY+stepY*2, btnPASTES_IMG, "", color(240), "fnPASTES");
-  btnPICKS  = new Button(baseX+stepX*2, baseY+stepY*2, btnPICKS_IMG, "", color(240), "fnPICKS");  
+  btnPICKS  = new Button(baseX+stepX*2, baseY+stepY*2, btnPICKS_IMG, "", color(240), "fnPICKS");
   btnROLLS  = new Button(baseX+stepX*3, baseY+stepY*2, btnROLLS_IMG, "", color(240), "fnROLLS");
   btnFLIPS  = new Button(baseX+stepX*4, baseY+stepY*2, btnFLIPS_IMG, "", color(240), "fnFLIPS");
-  btnRUPS   = new Button(baseX+stepX*5, baseY+stepY*2, btnRUPS_IMG, "", color(240), "fnRUPS");  
+  btnRUPS   = new Button(baseX+stepX*5, baseY+stepY*2, btnRUPS_IMG, "", color(240), "fnRUPS");
   btnRDOWNS = new Button(baseX+stepX*6, baseY+stepY*2, btnRDOWNS_IMG, "", color(240), "fnRDOWNS");
   btnCLEAR  = new Button(baseX+stepX*7, baseY+stepY*2, btnCLEAR_IMG, "", color(240), "fnCLS");
   btnLOAD   = new Button(baseX+stepX*8, baseY+stepY*2, btnLOAD_IMG, "", color(240), "fnloadFILE");
-  btnSAVE   = new Button(baseX+stepX*9, baseY+stepY*2, btnSAVE_IMG, "", color(240), "fnsaveFILE");  
-  btnHELP   = new Button(baseX+stepX*10, baseY+stepY*2, btnHELP_IMG, "", color(240), "fnHELP");  
-  
+  btnSAVE   = new Button(baseX+stepX*9, baseY+stepY*2, btnSAVE_IMG, "", color(240), "fnsaveFILE");
+  btnHELP   = new Button(baseX+stepX*10, baseY+stepY*2, btnHELP_IMG, "", color(240), "fnHELP");
+
   //btnTWINS  = new Button(baseX+stepX*2, baseY+stepY*2, btnTWINS_IMG, "", color(240), "fnTWINS");
   // Memory buttons
   baseX = 409;

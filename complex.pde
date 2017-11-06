@@ -209,8 +209,8 @@ void fnCXPOW()
     {
       lastX = digitNUM;
       int n = (int) digitNUM;
-      double im1 = pila.pop();      
-      double re1 = pila.pop();      
+      double im1 = pila.pop();
+      double re1 = pila.pop();
       double[] sol = CXPOW(re1, im1, n);
       double re = sol[0];
       double im = sol[1];
@@ -219,11 +219,11 @@ void fnCXPOW()
       outputSTR = String.valueOf(digitNUM);
       isResult = true;
       isBlocked = false;
-    } 
+    }
     else { outputSTR = "Complex power: power must be integer."; }
   }
   else { outputSTR = "Complex power: three numbers required."; }
-}  
+}
 // potenza di un numero complesso
 double[] CXPOW(double re1, double im1, int n)
 {
@@ -259,7 +259,7 @@ double[] CXPOW(double re1, double im1, int n)
     }
     t = CXINV(t[0], t[1]);
     re = t[0];
-    im = t[1];    
+    im = t[1];
   }
   double[] result = { re, im };
   return(result);

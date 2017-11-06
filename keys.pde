@@ -5,7 +5,7 @@ void keyPressed()
   start = true;
   // discover keys....
   // println((int)key, hex(key), keyCode);
-  
+
   // play sound
   if (sound) { click.play(); }
 
@@ -13,31 +13,31 @@ void keyPressed()
   {
     //fnTRIANGLE();
     //fnCXPOW();
-    fnTSUB();
+    //fnTSUB();
   }
-  
+
   if (key == '[') // test
   {
     //fnTRIANGLE();
     //fnCXINV();
-    fnTADD();
+    //fnTADD();
   }
   if (key == ';') // test
   {
     //fnTRIANGLE();
-    fnCXDIV();
+    //fnCXDIV();
     //fnCXMUL();
   }
-  
+
   // Sound keys (on/off)
-  if (key == '=') { sound = !sound; }  
-  
+  if (key == '=') { sound = !sound; }
+
   // Create number with exponent
-  if (key == 'l' || key == 'L') { fnEEX(); }  
-  
+  if (key == 'l' || key == 'L') { fnEEX(); }
+
   // open PDF manual (HELP)
   if (key == '?') { fnHELP(); }
-  
+
   // clear stack
   if (key == ESC) { key = 0; fnCLS(); }
 
@@ -88,7 +88,7 @@ void keyPressed()
 
   // recover last X
   if (key == 'x' || key == 'X')  { fnLASTX(); }
-  
+
   // math constant
   if (key == 'i' || key == 'I')  { fnPHI(); }
   if (key == 'o' || key == 'O')  { fnE(); }
@@ -102,21 +102,21 @@ void keyPressed()
   if (keyCode==116) { fnROT(); }  // F5
   if (keyCode==117) { fnNIP(); }  // F6
   if (keyCode==118) { fnTUCK(); } // F7
-  
+
   // paste stack  (Ctrl+v)
   if (key == 0x16) { fnPASTES(); }
   // copy stack (Ctrl+c)
   if (key == 0x03) { fnCOPYS(); }
-  
+
   if (keyCode==119) { fnChangeTrigUnit(); } // F8 (Degrees <-> Radians)
-  
+
   if (keyCode==120) { fnPICKS(); } // F9
   if (keyCode==121) { fnROLLS(); } // F10
   if (keyCode==122) { fnFLIPS(); } // F11
   if (keyCode == UP)   { fnRUPS(); }   // roll up the stack (+1)
   if (keyCode == DOWN) { fnRDOWNS(); } // roll down the stack (-1)
   if (keyCode==123) { fnCLS(); } // F12  clear stack
-  
+
   // load stack from file  (n)
   if (key == 'n' || key == 'N') { fnloadFILE(); }
   // save stack on file (m)
@@ -129,7 +129,7 @@ void keyPressed()
     if (numFloating > 9 ) { numFloating = -1; }
     digitRESET = "0." + nf(0, numFloating);
   }
-  
+
   if (keyCode == RIGHT) // less digits
   {
     numFloating = numFloating - 1;
@@ -144,5 +144,5 @@ void keyPressed()
   if (key=='z'||key=='Z') { saveImage(); }
 
   // print stack (console)
-  if (key == '`') { println(digitNUM); pila.printStack(); }  
+  if (key == '`') { println(digitNUM); pila.printStack(); }
 }
