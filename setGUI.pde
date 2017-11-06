@@ -95,6 +95,16 @@ void setGUI()
   btnEEX_IMG      = guiIMG.get(555, 612, 37, 33);
   btnFRACTGEN_IMG = guiIMG.get(592, 612, 37, 33);
   btnROUND_IMG = guiIMG.get(629, 612, 37, 33);
+  
+  // columns buttons
+  btnCXADD_IMG = guiIMG.get(0, 645, 37, 33);
+  btnCXSUB_IMG = guiIMG.get(37, 645, 37, 33);
+  btnCXMUL_IMG = guiIMG.get(74, 645, 37, 33);
+  btnCXDIV_IMG = guiIMG.get(111, 645, 37, 33);
+  btnCXINV_IMG = guiIMG.get(148, 645, 37, 33);
+  btnCXPOW_IMG = guiIMG.get(185, 645, 37, 33);
+  btnTADD_IMG = guiIMG.get(222, 645, 37, 33);
+  btnTSUB_IMG = guiIMG.get(259, 645, 37, 33);
 
   // Forth Image Buttons
   btnDUP_IMG = guiIMG.get(0, 513, 55, 33);
@@ -257,6 +267,21 @@ void setGUI()
   //btnRND       = new Button(baseX+stepX*5, baseY, btnRND_IMG, "", color(240), "fnRND");
   btnROUND     = new Button(baseX+stepX*5, baseY, btnROUND_IMG, "", color(240), "fnROUND");
   btnFIX       = new Button(baseX+stepX*6, baseY, btnFIX_IMG, "", color(240), "fnFIX");  
+  
+  // Column buttons
+  baseX = 909;
+  baseY = 16;
+  stepX = 44;
+  stepY = 36;  
+  
+  btnCXADD = new Button(baseX,       baseY, btnCXADD_IMG, "", color(240), "fnCXADD");
+  btnCXSUB = new Button(baseX+stepX, baseY, btnCXSUB_IMG, "", color(240), "fnCXSUB");
+  btnCXMUL = new Button(baseX,       baseY+stepY, btnCXMUL_IMG, "", color(240), "fnCXMUL");
+  btnCXDIV = new Button(baseX+stepX, baseY+stepY, btnCXDIV_IMG, "", color(240), "fnCXDIV");
+  btnCXINV = new Button(baseX,       baseY+stepY*2, btnCXINV_IMG, "", color(240), "fnCXINV");
+  btnCXPOW = new Button(baseX+stepX, baseY+stepY*2,  btnCXPOW_IMG, "", color(240), "fnCXPOW");
+  btnTADD = new Button(baseX,       baseY+stepY*3,  btnTADD_IMG, "", color(240), "fnTADD");
+  btnTSUB = new Button(baseX+stepX, baseY+stepY*3,  btnTSUB_IMG, "", color(240), "fnTSUB");
 
   // Forth buttons
   baseX = 8;

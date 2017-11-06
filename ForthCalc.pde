@@ -142,14 +142,14 @@ PImage btnCRAMER_IMG, btnTRIANGLE_IMG;
 Button btnHORNER, btnCEQ;
 PImage btnHORNER_IMG, btnCEQ_IMG;
 
-Button btnEEX;
-PImage btnEEX_IMG;
+Button btnEEX, btnCBRT, btnROUND;
+PImage btnEEX_IMG, btnCBRT_IMG, btnROUND_IMG;
 
-Button btnCBRT;
-PImage btnCBRT_IMG;
+Button btnCXADD, btnCXSUB, btnCXMUL, btnCXDIV, btnCXINV, btnCXPOW;
+PImage btnCXADD_IMG, btnCXSUB_IMG, btnCXMUL_IMG, btnCXDIV_IMG, btnCXINV_IMG, btnCXPOW_IMG;
 
-Button btnROUND;
-PImage btnROUND_IMG;
+Button btnTADD, btnTSUB;
+PImage btnTADD_IMG, btnTSUB_IMG;
 
 // Forth Buttons
 Button btnDUP, btnDROP, btnSWAP, btnOVER, btnROT, btnNIP, btnTUCK;
@@ -171,7 +171,7 @@ PImage btnRCL1_IMG, btnRCL2_IMG, btnRCL3_IMG, btnRCL4_IMG, btnRCL5_IMG;
 //*********************************
 void setup()
 {
-  size(900, 500);
+  size(1000, 500);
   //size(1280, 720);
   smooth();
   frameRate(25);
@@ -345,6 +345,16 @@ void mousePressed()
   btnSTAT.onClick();
   btnROUND.onClick();
   //btnRND.onClick();
+
+  // column buttons
+  btnCXADD.onClick();
+  btnCXSUB.onClick();
+  btnCXMUL.onClick();
+  btnCXDIV.onClick();
+  btnCXINV.onClick();
+  btnCXPOW.onClick();
+  btnTADD.onClick();
+  btnTSUB.onClick();
 
   // Forth
   btnDUP.onClick();

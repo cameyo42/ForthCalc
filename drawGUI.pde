@@ -71,7 +71,7 @@ String formatNumber(double n)
     //if ((n > minEps && n < 0 ) || (n > 0.0 && n < maxEps)) { sym.setExponentSeparator("x10^"); }
     //else { sym.setExponentSeparator("x10^+"); }
     if ((n > minEps && n < 0 ) || (n > 0.0 && n < maxEps)) { sym.setExponentSeparator(" E"); }
-    else { sym.setExponentSeparator(" E+"); }    
+    else { sym.setExponentSeparator(" E+"); }
     df = new DecimalFormat("#.################E0", sym);
   }
   else
@@ -206,6 +206,16 @@ void showGUI()
   btnFRACTGEN.show();
   btnCRAMER.show();
   btnTRIANGLE.show();
+
+  // column buttons
+  btnCXADD.show();
+  btnCXSUB.show();
+  btnCXMUL.show();
+  btnCXDIV.show();
+  btnCXINV.show();
+  btnCXPOW.show();
+  btnTADD.show();
+  btnTSUB.show();
 
   // Forth
   btnDUP.show();

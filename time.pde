@@ -26,7 +26,7 @@ void fnTADD()
     String t2$ = df.format(t2);
     //String t2$ = String.valueOf(t1);
     //String t2$ = String.valueOf(t2);
-    println(t1$,t2$);
+    //println(t1$,t2$);
     t1len = t1$.length();
     t2len = t2$.length();
     if (t1 < 0 || t2 < 0)
@@ -49,11 +49,11 @@ void fnTADD()
         mm1$ = t1$.substring(t1len-4,t1len-2);
         ss1$ = t1$.substring(t1len-2,t1len);
       }
-      println(hh1$, mm1$,ss1$);
+      //println(hh1$, mm1$,ss1$);
       hh1 = Long.valueOf(hh1$);
       mm1 = Long.valueOf(mm1$);
       ss1 = Long.valueOf(ss1$);
-      println(hh1, mm1,ss1);
+      //println(hh1, mm1,ss1);
 
       if (t2len == 1) { hh2$ = "00"; mm2$ = "00"; ss2$ = "0" + t2$; }
       else if (t2len == 2) { hh2$ = "00"; mm2$ = "00"; ss2$ = t2$.substring(t2len-2,t2len); }
@@ -65,11 +65,11 @@ void fnTADD()
         mm2$ = t2$.substring(t2len-4,t2len-2);
         ss2$ = t2$.substring(t2len-2,t2len);
       }
-      println(hh2$, mm2$,ss2$);
+      //println(hh2$, mm2$,ss2$);
       hh2 = Long.valueOf(hh2$);
       mm2 = Long.valueOf(mm2$);
       ss2 = Long.valueOf(ss2$);
-      println(hh2, mm2,ss2);
+      //println(hh2, mm2,ss2);
 
       // calcolo di t1 + t2
       ss = ss1 + ss2;
@@ -79,16 +79,16 @@ void fnTADD()
       while (mm >= 60) { mm = mm - 60; hh = hh + 1; }
 
       hh = hh + hh1 + hh2;
-      println(hh,mm,ss);
+      //println(hh,mm,ss);
       hh$ = String.valueOf(hh);
       mm$ = String.valueOf(mm);
       if (mm$.length() == 1) { mm$ = "0"+ mm$; }
       ss$ = String.valueOf(ss);
       if (ss$.length() == 1) { ss$ = "0"+ ss$; }
       String res$ = hh$ + mm$ +ss$;
-      println(res$);
+      //println(res$);
       double res = Double.valueOf(res$);
-      println(res);
+      //println(res);
 // For example, the result of TIME('11:02:26') - '00:32:56' is 102930 (a duration of 10 hours, 29 minutes, and 30 seconds).
       digitNUM = res;
       outputSTR = String.valueOf(digitNUM);
@@ -119,7 +119,7 @@ void fnTSUB()
     String t2$ = df.format(t2);
     //String t2$ = String.valueOf(t1);
     //String t2$ = String.valueOf(t2);
-    println(t1$,t2$);
+    //println(t1$,t2$);
     t1len = t1$.length();
     t2len = t2$.length();
     if (t1 < 0 || t2 < 0)
@@ -142,11 +142,11 @@ void fnTSUB()
         mm1$ = t1$.substring(t1len-4,t1len-2);
         ss1$ = t1$.substring(t1len-2,t1len);
       }
-      println(hh1$, mm1$,ss1$);
+      //println(hh1$, mm1$,ss1$);
       hh1 = Long.valueOf(hh1$);
       mm1 = Long.valueOf(mm1$);
       ss1 = Long.valueOf(ss1$);
-      println(hh1, mm1, ss1);
+      //println(hh1, mm1, ss1);
 
       if (t2len == 1) { hh2$ = "00"; mm2$ = "00"; ss2$ = "0" + t2$; }
       else if (t2len == 2) { hh2$ = "00"; mm2$ = "00"; ss2$ = t2$.substring(t2len-2,t2len); }
@@ -158,11 +158,11 @@ void fnTSUB()
         mm2$ = t2$.substring(t2len-4,t2len-2);
         ss2$ = t2$.substring(t2len-2,t2len);
       }
-      println(hh2$, mm2$,ss2$);
+      //println(hh2$, mm2$,ss2$);
       hh2 = Long.valueOf(hh2$);
       mm2 = Long.valueOf(mm2$);
       ss2 = Long.valueOf(ss2$);
-      println(hh2, mm2,ss2);
+      //println(hh2, mm2,ss2);
 
 //If SECOND(TIME2) <= SECOND(TIME1)
 //   then SECOND(RESULT) = SECOND(TIME1) - SECOND(TIME2).
@@ -177,7 +177,7 @@ void fnTSUB()
       
       // find bigger time
       boolean scambio = false;
-      println((ss1 + mm1*1000 + hh1 *10000),(ss2 + mm2*1000 + hh2 *10000));
+      //println((ss1 + mm1*1000 + hh1 *10000),(ss2 + mm2*1000 + hh2 *10000));
       if (ss1 + mm1*1000 + hh1 *10000 < ss2 + mm2*1000 + hh2 *10000) 
       { 
         long temp = hh1; hh1 = hh2; hh2 = temp;
@@ -186,8 +186,8 @@ void fnTSUB()
         scambio = true;
         
       }
-      println("t1=",hh1,mm1,ss1);
-      println("t2=",hh2,mm2,ss2);
+      //println("t1=",hh1,mm1,ss1);
+      //println("t2=",hh2,mm2,ss2);
       // calcolo di t1 - t2
       if (ss2 <= ss1) {ss = ss1 - ss2; }
       else { ss = 60 + ss1 - ss2; mm2 = mm2 + 1; }
