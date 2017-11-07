@@ -9,19 +9,22 @@ void keyPressed()
   // play sound
   if (sound) { click.play(); }
 
-  if (key == ']') // test
-  {
-    //fnTRIANGLE();
-    //fnCXPOW();
-    //fnTSUB();
-  }
-
   if (key == '[') // test
   {
     //fnTRIANGLE();
     //fnCXINV();
     //fnTADD();
+    fnASEQ();
   }
+  
+  if (key == ']') // test
+  {
+    //fnTRIANGLE();
+    //fnCXPOW();
+    //fnTSUB();
+    fnGSEQ();
+  }
+
   if (key == ';') // test
   {
     //fnTRIANGLE();

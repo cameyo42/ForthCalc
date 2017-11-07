@@ -608,6 +608,7 @@ void fnROUND()
   {
     if ((digitNUM >= 0.0) && (digitNUM < 10.0) && ((int)digitNUM == digitNUM))
     {
+      lastX = digitNUM;
       int n = (int) digitNUM;
       double x = pila.pop();
       if (n == 0) { digitNUM = Math.rint(x); }
@@ -1913,4 +1914,64 @@ double[] solveCubic(double a, double b, double c, double d)
   // return solution (error will return: 0,0,0,0,0,0)
   double[] rootList = { x1, i1, x2, i2, x3, i3 };
   return(rootList);
+}
+
+// Arithmetic sequence
+void fnASEQ()
+{
+  if (pila.stackSize() > 1)
+  {
+    lastX = digitNUM;
+    int n = (int) digitNUM; // how many numbers in sequence
+    double step = pila.getItem(0); // step value
+    double x0 = pila.getItem(1); // start value
+    if (((int)digitNUM != digitNUM) || (n > maxSlot) || (digitNUM < 0))
+    {
+      outputSTR = "Arithmetic sequence: bad numbers."; 
+    }
+    else
+    { 
+      step = pila.pop();
+      x0 = pila.pop();
+      for (int i=0; i<n-1; i++)
+      {
+        pila.push(x0 + step*(i));
+      }
+      digitNUM = x0 + step*(n-1);
+      outputSTR = String.valueOf(digitNUM);
+      isResult = true;
+      isBlocked = false;
+    }  
+  }
+  else { outputSTR = "Arithmetic sequence: three numbers required."; }
+}
+
+// Geometric sequence
+void fnGSEQ()
+{
+  if (pila.stackSize() > 1)
+  {
+    lastX = digitNUM;
+    int n = (int) digitNUM; // how many numbers in sequence
+    double ratio = pila.getItem(0); // ratio value
+    double x0 = pila.getItem(1); // start value
+    if (((int)digitNUM != digitNUM) || (n > maxSlot) || (digitNUM < 0))
+    {
+      outputSTR = "Geometric sequence: bad numbers."; 
+    }
+    else
+    { 
+      ratio = pila.pop();
+      x0 = pila.pop();
+      for (int i=0; i<n-1; i++)
+      {
+        pila.push(x0*Math.pow(ratio,i));
+      }
+      digitNUM = x0*Math.pow(ratio,n-1);
+      outputSTR = String.valueOf(digitNUM);
+      isResult = true;
+      isBlocked = false;
+    }  
+  }
+  else { outputSTR = "Geometric sequence: three numbers required."; }
 }
