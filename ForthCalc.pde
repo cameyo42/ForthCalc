@@ -282,17 +282,16 @@ void mousePressed()
   btnPOWTEN.onClick();
   btnPOW.onClick();
   btnINVERSE.onClick();
-  btnPERC.onClick();
   btnINT.onClick();
+  btnABS.onClick();
 
   btnSQRT.onClick();
   btnLN.onClick();
   btnLOG.onClick();
   btnROOTS.onClick();
   btnCBRT.onClick();
-  //btnABS.onClick();
-  btnDELTA.onClick();
   btnFRAC.onClick();
+  btnROUND.onClick();
 
   btnSIN.onClick();
   btnCOS.onClick();
@@ -343,10 +342,11 @@ void mousePressed()
   btnPERM.onClick();
   btnCOMB.onClick();
   btnSTAT.onClick();
-  btnROUND.onClick();
-  //btnRND.onClick();
+  btnRND.onClick();
 
   // column buttons
+  btnPERC.onClick();
+  btnDELTA.onClick();
   btnCXADD.onClick();
   btnCXSUB.onClick();
   btnCXMUL.onClick();

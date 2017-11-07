@@ -145,17 +145,16 @@ void showGUI()
   btnPOWTEN.show();
   btnPOW.show();
   btnINVERSE.show();
-  btnPERC.show();
   btnINT.show();
+  btnABS.show();
 
   btnSQRT.show();
   btnLN.show();
   btnLOG.show();
   btnROOTS.show();
   btnCBRT.show();
-  //btnABS.show();
-  btnDELTA.show();
   btnFRAC.show();
+  btnROUND.show();
 
   btnSIN.show();
   btnCOS.show();
@@ -195,9 +194,8 @@ void showGUI()
   btnPERM.show();
   btnCOMB.show();
   btnSTAT.show();
+  btnRND.show();
   btnFIX.show();
-  btnROUND.show();
-  // btnRND.show();
 
   btnFRACTADD.show();
   btnFRACTSUB.show();
@@ -208,6 +206,8 @@ void showGUI()
   btnTRIANGLE.show();
 
   // column buttons
+  btnPERC.show();
+  btnDELTA.show();
   btnCXADD.show();
   btnCXSUB.show();
   btnCXMUL.show();

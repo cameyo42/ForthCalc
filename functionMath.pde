@@ -10,7 +10,7 @@
 // Type Size in Bytes Range
 // byte 1 byte -128 to 127
 // short 2 bytes -32,768 to 32,767
-// int 4 bytes -2,147,483,648 to 2,147,483, 647
+// int 4 bytes -2,147,483,648 to 2,147,483,647
 // long 8 bytes -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
 // float 4 bytes approximately ±3.40282347E+38F (6-7 significant decimal digits) Java implements IEEE 754 standard
 // double 8 bytes approximately ±1.79769313486231570E+308 (15 significant decimal digits)
@@ -608,6 +608,7 @@ void fnROUND()
   {
     if ((digitNUM >= 0.0) && (digitNUM < 10.0) && ((int)digitNUM == digitNUM))
     {
+      lastX = digitNUM;
       int n = (int) digitNUM;
       double x = pila.pop();
       if (n == 0) { digitNUM = Math.rint(x); }
@@ -1913,4 +1914,121 @@ double[] solveCubic(double a, double b, double c, double d)
   // return solution (error will return: 0,0,0,0,0,0)
   double[] rootList = { x1, i1, x2, i2, x3, i3 };
   return(rootList);
+}
+
+// Arithmetic sequence
+void fnASEQ()
+{
+  if (pila.stackSize() > 1)
+  {
+    lastX = digitNUM;
+    int n = (int) digitNUM; // how many numbers in sequence
+    double step = pila.getItem(0); // step value
+    double x0 = pila.getItem(1); // start value
+    if (((int)digitNUM != digitNUM) || (n > maxSlot) || (digitNUM < 0))
+    {
+      outputSTR = "Arithmetic sequence: bad numbers.";
+    }
+    else
+    {
+      step = pila.pop();
+      x0 = pila.pop();
+      for (int i=0; i<n-1; i++)
+      {
+        pila.push(x0 + step*(i));
+      }
+      digitNUM = x0 + step*(n-1);
+      outputSTR = String.valueOf(digitNUM);
+      isResult = true;
+      isBlocked = false;
+    }
+  }
+  else { outputSTR = "Arithmetic sequence: three numbers required."; }
+}
+
+// Geometric sequence
+void fnGSEQ()
+{
+  if (pila.stackSize() > 1)
+  {
+    lastX = digitNUM;
+    int n = (int) digitNUM; // how many numbers in sequence
+    double ratio = pila.getItem(0); // ratio value
+    double x0 = pila.getItem(1); // start value
+    if (((int)digitNUM != digitNUM) || (n > maxSlot) || (digitNUM < 0))
+    {
+      outputSTR = "Geometric sequence: bad numbers.";
+    }
+    else
+    {
+      ratio = pila.pop();
+      x0 = pila.pop();
+      for (int i=0; i<n-1; i++)
+      {
+        pila.push(x0*Math.pow(ratio,i));
+      }
+      digitNUM = x0*Math.pow(ratio,n-1);
+      outputSTR = String.valueOf(digitNUM);
+      isResult = true;
+      isBlocked = false;
+    }
+  }
+  else { outputSTR = "Geometric sequence: three numbers required."; }
+}
+
+// Decimal to Binary
+void fnTOBIN()
+{
+  if (digitNUM > 4095 || digitNUM < 0) // 111111111111 in binary 
+  {
+    outputSTR = "To Binary: number out of range [0,1024].";
+  }
+  else
+  {
+    lastX = digitNUM;
+    int n = (int) digitNUM;
+    df = new DecimalFormat("#########################");
+    String n$ = df.format(n);
+    n$ = Integer.toBinaryString(n);
+    long binaryValue = Long.valueOf(n$);
+    digitNUM = (double) binaryValue;
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+
+}
+
+// Binary to Decimal
+void fnTODEC()
+{
+  if (digitNUM > 111111111111L || digitNUM < 0) // 4095 in decimal
+  {
+    outputSTR = "To Decimal: number out of range [0,111111111111].";
+  }
+  else
+  {
+    int n = (int) digitNUM;
+    df = new DecimalFormat("#########################");
+    String n$ = df.format(digitNUM);  
+    boolean ok = true;
+    for (int i=0; i<n$.length(); i++)
+    {
+      if (n$.charAt(i) != '1' && n$.charAt(i) != '0') { ok = false; }
+    }
+    if (ok)
+    {
+      lastX = digitNUM;
+      int decimalValue = Integer.parseInt(n$, 2);
+      digitNUM = (double) decimalValue;
+      outputSTR = String.valueOf(digitNUM);
+      outputSTR = n$;
+      isResult = true;
+      isBlocked = false;  
+    }
+    else
+    {
+      outputSTR = "To Decimal: only 0 and 1 for binary number.";
+    }
+  }  
 }
