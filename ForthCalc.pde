@@ -497,7 +497,6 @@ void fnsaveFILE()
   }
   numero = String.valueOf(pila.getItem(items-1));
   lista = lista + numero;
-  println(lista);
   String[] outLST = split(lista, "|");
   String filename = newFilename(2) + ".lst";
   saveStrings(dataPath(filename), outLST);

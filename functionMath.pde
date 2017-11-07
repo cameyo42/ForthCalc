@@ -1927,10 +1927,17 @@ void fnASEQ()
     double x0 = pila.getItem(1); // start value
     if (((int)digitNUM != digitNUM) || (n > maxSlot) || (digitNUM < 0))
     {
+<<<<<<< HEAD
       outputSTR = "Arithmetic sequence: bad numbers.";
     }
     else
     {
+=======
+      outputSTR = "Arithmetic sequence: bad numbers."; 
+    }
+    else
+    { 
+>>>>>>> 3f8b53899e100588bfc25b7d4556a434c67cc007
       step = pila.pop();
       x0 = pila.pop();
       for (int i=0; i<n-1; i++)
@@ -1941,7 +1948,11 @@ void fnASEQ()
       outputSTR = String.valueOf(digitNUM);
       isResult = true;
       isBlocked = false;
+<<<<<<< HEAD
     }
+=======
+    }  
+>>>>>>> 3f8b53899e100588bfc25b7d4556a434c67cc007
   }
   else { outputSTR = "Arithmetic sequence: three numbers required."; }
 }
@@ -1957,10 +1968,17 @@ void fnGSEQ()
     double x0 = pila.getItem(1); // start value
     if (((int)digitNUM != digitNUM) || (n > maxSlot) || (digitNUM < 0))
     {
+<<<<<<< HEAD
       outputSTR = "Geometric sequence: bad numbers.";
     }
     else
     {
+=======
+      outputSTR = "Geometric sequence: bad numbers."; 
+    }
+    else
+    { 
+>>>>>>> 3f8b53899e100588bfc25b7d4556a434c67cc007
       ratio = pila.pop();
       x0 = pila.pop();
       for (int i=0; i<n-1; i++)
@@ -1971,6 +1989,7 @@ void fnGSEQ()
       outputSTR = String.valueOf(digitNUM);
       isResult = true;
       isBlocked = false;
+<<<<<<< HEAD
     }
   }
   else { outputSTR = "Geometric sequence: three numbers required."; }
@@ -2032,3 +2051,9 @@ void fnTODEC()
     }
   }  
 }
+=======
+    }  
+  }
+  else { outputSTR = "Geometric sequence: three numbers required."; }
+}
+>>>>>>> 3f8b53899e100588bfc25b7d4556a434c67cc007
