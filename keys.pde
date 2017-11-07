@@ -14,11 +14,8 @@ void keyPressed()
     //fnTRIANGLE();
     //fnCXINV();
     //fnTADD();
-<<<<<<< HEAD
-    fnTOBIN();
-=======
-    fnASEQ();
->>>>>>> 3f8b53899e100588bfc25b7d4556a434c67cc007
+    fnASEQ();    
+    //fnTOBIN();
   }
   
   if (key == ']') // test
@@ -26,13 +23,9 @@ void keyPressed()
     //fnTRIANGLE();
     //fnCXPOW();
     //fnTSUB();
-<<<<<<< HEAD
     //fnGSEQ();
-    //fnASEQ();
-    fnTODEC();
-=======
     fnGSEQ();
->>>>>>> 3f8b53899e100588bfc25b7d4556a434c67cc007
+    //fnTODEC();
   }
 
   if (key == ';') // test
