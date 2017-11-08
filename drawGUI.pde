@@ -216,6 +216,8 @@ void showGUI()
   btnCXPOW.show();
   btnTADD.show();
   btnTSUB.show();
+  btnASEQ.show();
+  btnGSEQ.show();
 
   // Forth
   btnDUP.show();

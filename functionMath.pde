@@ -508,10 +508,10 @@ void fnPHI()
 
 void fnINT()
 {
-  lastX = digitNUM;
-  long maxVALUE = 999999999999999L;
-  if (digitNUM < maxVALUE)
+  double n = digitNUM;
+  if (((n < maxNum) && (n > maxEps)) || ((n > minNum) && (n < minEps)))
   {
+    lastX = digitNUM;
     long iPart = (long) digitNUM;
     double fPart = digitNUM - iPart;
     double integralPart = (double) iPart;
@@ -521,16 +521,17 @@ void fnINT()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Int: number too high (+-999999999999999)"; }
+  else { outputSTR = "Int: number our of range"; }
 }
 
 void fnFRAC()
 {
-  long maxVALUE = 999999999999999L;
-  if (digitNUM < maxVALUE)
+  double n = digitNUM;
+  if (((n < maxNum) && (n > maxEps)) || ((n > minNum) && (n < minEps)))
   {
     lastX = digitNUM;
     long iPart = (long) digitNUM;
+    println(iPart);
     double fPart = digitNUM - iPart;
     println(fPart);
     double integralPart = (double) iPart;
@@ -540,7 +541,7 @@ void fnFRAC()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Frac: number too high (+-999999999999999)"; }
+  else { outputSTR = "Frac: number out of range"; }
 }
 
 void fnDMS() // from decimal degrees to degrees minute second
@@ -1961,7 +1962,6 @@ void fnGSEQ()
     }
     else
     { 
-
       ratio = pila.pop();
       x0 = pila.pop();
       for (int i=0; i<n-1; i++)

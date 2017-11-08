@@ -105,6 +105,8 @@ void setGUI()
   btnCXPOW_IMG = guiIMG.get(185, 645, 37, 33);
   btnTADD_IMG = guiIMG.get(222, 645, 37, 33);
   btnTSUB_IMG = guiIMG.get(259, 645, 37, 33);
+  btnASEQ_IMG = guiIMG.get(296, 645, 37, 33);
+  btnGSEQ_IMG = guiIMG.get(333, 645, 37, 33);
 
   // Forth Image Buttons
   btnDUP_IMG = guiIMG.get(0, 513, 55, 33);
@@ -252,7 +254,6 @@ void setGUI()
   btnCRAMER    = new Button(baseX+stepX*5, baseY+stepY, btnCRAMER_IMG, "", color(240), "fnCRAMER");
   btnTRIANGLE  = new Button(baseX+stepX*6, baseY+stepY, btnTRIANGLE_IMG, "", color(240), "fnTRIANGLE");
 
-
   baseX = baseX;
   baseY = baseY+stepY + 40;
   stepX = 40;
@@ -279,9 +280,11 @@ void setGUI()
   btnCXMUL = new Button(baseX,        baseY+stepY*2, btnCXMUL_IMG, "", color(240), "fnCXMUL");
   btnCXDIV = new Button(baseX+stepX,  baseY+stepY*2, btnCXDIV_IMG, "", color(240), "fnCXDIV");
   btnCXINV = new Button(baseX,        baseY+stepY*3, btnCXINV_IMG, "", color(240), "fnCXINV");
-  btnCXPOW = new Button(baseX+stepX,  baseY+stepY*3,  btnCXPOW_IMG, "", color(240), "fnCXPOW");
-  btnTADD  = new Button(baseX,        baseY+stepY*4,  btnTADD_IMG, "", color(240), "fnTADD");
-  btnTSUB  = new Button(baseX+stepX,  baseY+stepY*4,  btnTSUB_IMG, "", color(240), "fnTSUB");
+  btnCXPOW = new Button(baseX+stepX,  baseY+stepY*3, btnCXPOW_IMG, "", color(240), "fnCXPOW");
+  btnTADD  = new Button(baseX,        baseY+stepY*4, btnTADD_IMG, "", color(240), "fnTADD");
+  btnTSUB  = new Button(baseX+stepX,  baseY+stepY*4, btnTSUB_IMG, "", color(240), "fnTSUB");
+  btnASEQ  = new Button(baseX,        baseY+stepY*5, btnASEQ_IMG, "", color(240), "fnASEQ");
+  btnGSEQ  = new Button(baseX+stepX,  baseY+stepY*5, btnGSEQ_IMG, "", color(240), "fnGSEQ");
 
   // Forth buttons
   baseX = 8;

@@ -121,13 +121,15 @@ void saveButtons()
   //btnRCL3_IMG.save("btnRCL3_IMG.png");
   //btnRCL4_IMG.save("btnRCL4_IMG.png");
   //btnRCL5_IMG.save("btnRCL5_IMG.png");
-  btnCXADD_IMG.save("btnCXADD_IMG.png");
-  btnCXSUB_IMG.save("btnCXSUB_IMG.png");
-  btnCXMUL_IMG.save("btnCXMUL_IMG.png");
-  btnCXDIV_IMG.save("btnCXDIV_IMG.png");
-  btnCXINV_IMG.save("btnCXINV_IMG.png");
-  btnCXPOW_IMG.save("btnCXPOW_IMG.png");
-  btnTADD_IMG.save("btnTADD_IMG.png");
-  btnTSUB_IMG.save("btnTSUB_IMG.png"); 
+  //btnCXADD_IMG.save("btnCXADD_IMG.png");
+  //btnCXSUB_IMG.save("btnCXSUB_IMG.png");
+  //btnCXMUL_IMG.save("btnCXMUL_IMG.png");
+  //btnCXDIV_IMG.save("btnCXDIV_IMG.png");
+  //btnCXINV_IMG.save("btnCXINV_IMG.png");
+  //btnCXPOW_IMG.save("btnCXPOW_IMG.png");
+  //btnTADD_IMG.save("btnTADD_IMG.png");
+  //btnTSUB_IMG.save("btnTSUB_IMG.png"); 
+  btnASEQ_IMG.save("btnASEQ_IMG.png"); 
+  btnGSEQ_IMG.save("btnGSEQ_IMG.png"); 
   
 }  

@@ -151,6 +151,9 @@ PImage btnCXADD_IMG, btnCXSUB_IMG, btnCXMUL_IMG, btnCXDIV_IMG, btnCXINV_IMG, btn
 Button btnTADD, btnTSUB;
 PImage btnTADD_IMG, btnTSUB_IMG;
 
+Button btnASEQ, btnGSEQ;
+PImage btnASEQ_IMG, btnGSEQ_IMG;
+
 // Forth Buttons
 Button btnDUP, btnDROP, btnSWAP, btnOVER, btnROT, btnNIP, btnTUCK;
 PImage btnDUP_IMG, btnDROP_IMG, btnSWAP_IMG, btnOVER_IMG, btnROT_IMG, btnNIP_IMG, btnTUCK_IMG;
@@ -172,6 +175,7 @@ PImage btnRCL1_IMG, btnRCL2_IMG, btnRCL3_IMG, btnRCL4_IMG, btnRCL5_IMG;
 void setup()
 {
   size(1000, 500);
+  //size(1024, 720);
   //size(1280, 720);
   smooth();
   frameRate(25);
@@ -355,6 +359,8 @@ void mousePressed()
   btnCXPOW.onClick();
   btnTADD.onClick();
   btnTSUB.onClick();
+  btnASEQ.onClick();
+  btnGSEQ.onClick();
 
   // Forth
   btnDUP.onClick();
