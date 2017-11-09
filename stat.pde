@@ -173,7 +173,7 @@ void fnLR()
     if (sX == 0 || sY == 0 || sX*sY < 0 ) { R = 0; }
     else { R = sXY/Math.sqrt(sX*sY); }
     println("correlazione = ", R);
-    //println(Math.toDegrees(Math.asin(b)));
+    println(Math.toDegrees(Math.atan(b)));
     // write results on stack
     pila.push(R);
     pila.push(b);
