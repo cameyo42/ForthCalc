@@ -121,8 +121,8 @@ void fnLR()
     listaX[0] = pila.pop();
     for (int i=1; i<items; i++)
     {
-      listaX[i] = pila.pop();
       listaY[i] = pila.pop();
+      listaX[i] = pila.pop();
     }
     println(items);
     for (int i=0; i<items; i++)
@@ -130,28 +130,55 @@ void fnLR()
       println(listaX[i],listaY[i]);
     }
     // calculate statistic parameters
-    Arrays.sort(listaX); // sort array
-    Arrays.sort(listaY); // sort array
+    //Arrays.sort(listaX); // sort array
+    //Arrays.sort(listaY); // sort array
     double mediaX = 0.0;
     double mediaY = 0.0;
-    double sommaXY = 0.0;
-    double x2 = 0.0;
+    double sommaXY = 0.0; double mediaXY = 0.0;
+    double X2 = 0.0; double mediaX2 = 0.0;
+    double Y2 = 0.0; double mediaY2 = 0.0;
+    
     for (int i = 0; i < listaX.length; i++)
     {
       mediaX += listaX[i];
       mediaY += listaY[i];
       sommaXY = sommaXY + listaX[i]*listaY[i];
+      println(listaX[i]*listaY[i]);
+      X2 = X2 + listaX[i]*listaX[i];
+      Y2 = Y2 + listaY[i]*listaY[i];
     }
+    
     mediaX = mediaX / listaX.length;
     mediaY = mediaY / listaY.length;
+    mediaX2 = X2 / listaX.length;
+    mediaY2 = Y2 / listaY.length;
+    mediaXY = sommaXY / listaX.length;
+    
     println("medie=",mediaX, mediaY);
     println("sommaXY=",sommaXY);
-
+    println("X2=",X2);
+    if ((X2/items - mediaX*mediaX) == 0) { b = 0; }
+    else { b = ((sommaXY/items) - mediaX*mediaY) / (X2/items - mediaX*mediaX); }
+    a = mediaY - b*mediaX;
+    println(a,b);
+    // coefficiente di correlazione
+    println(mediaX,mediaY,mediaX2,mediaY2,mediaXY);
+    double R = 0.0;
+    double sX = 0.0, sY = 0.0, sXY = 0.0;
+    sX = mediaX2 - mediaX*mediaX;
+    sY = mediaY2 - mediaY*mediaY;
+    sXY = mediaXY - mediaX*mediaY;
+    println(sX,sY,sXY);
+    if (sX == 0 || sY == 0) { R = 0; }
+    else { R = sXY/Math.sqrt(sX*sY); }
+    println("correlazione = ", R);
     // write results on stack
-    digitNUM = items;
+    pila.push(R);
+    pila.push(b);
+    digitNUM = a;
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "L.R.: at least two numbers required."; }
+  else { outputSTR = "L.R.: data must be pair (x,y)."; }
 }
