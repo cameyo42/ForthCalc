@@ -14,8 +14,9 @@ void keyPressed()
     //fnTRIANGLE();
     //fnCXINV();
     //fnTADD();
-    fnASEQ();    
+    //fnASEQ();    
     //fnTOBIN();
+    fnLR();
   }
   
   if (key == ']') // test
@@ -24,7 +25,7 @@ void keyPressed()
     //fnCXPOW();
     //fnTSUB();
     //fnGSEQ();
-    fnGSEQ();
+    //fnGSEQ();
     //fnTODEC();
   }
 
