@@ -107,6 +107,7 @@ double variance(double m[])
 }
 
 // Linear Regression of data
+// y = a + b*x
 void fnLR()
 {
   if (pila.stackSize() > 0 && (pila.stackSize() & 1) != 0)
@@ -169,9 +170,10 @@ void fnLR()
     sY = mediaY2 - mediaY*mediaY;
     sXY = mediaXY - mediaX*mediaY;
     println(sX,sY,sXY);
-    if (sX == 0 || sY == 0) { R = 0; }
+    if (sX == 0 || sY == 0 || sX*sY < 0 ) { R = 0; }
     else { R = sXY/Math.sqrt(sX*sY); }
     println("correlazione = ", R);
+    //println(Math.toDegrees(Math.asin(b)));
     // write results on stack
     pila.push(R);
     pila.push(b);
