@@ -154,6 +154,9 @@ PImage btnTADD_IMG, btnTSUB_IMG;
 Button btnASEQ, btnGSEQ;
 PImage btnASEQ_IMG, btnGSEQ_IMG;
 
+Button btnLR;
+PImage btnLR_IMG;
+
 // Forth Buttons
 Button btnDUP, btnDROP, btnSWAP, btnOVER, btnROT, btnNIP, btnTUCK;
 PImage btnDUP_IMG, btnDROP_IMG, btnSWAP_IMG, btnOVER_IMG, btnROT_IMG, btnNIP_IMG, btnTUCK_IMG;
@@ -361,7 +364,8 @@ void mousePressed()
   btnTSUB.onClick();
   btnASEQ.onClick();
   btnGSEQ.onClick();
-
+  btnLR.onClick();
+  
   // Forth
   btnDUP.onClick();
   btnDROP.onClick();

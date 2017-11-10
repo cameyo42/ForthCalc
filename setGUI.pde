@@ -107,6 +107,8 @@ void setGUI()
   btnTSUB_IMG = guiIMG.get(259, 645, 37, 33);
   btnASEQ_IMG = guiIMG.get(296, 645, 37, 33);
   btnGSEQ_IMG = guiIMG.get(333, 645, 37, 33);
+  btnLR_IMG   = guiIMG.get(370, 645, 37, 33);
+  
 
   // Forth Image Buttons
   btnDUP_IMG = guiIMG.get(0, 513, 55, 33);
@@ -285,6 +287,7 @@ void setGUI()
   btnTSUB  = new Button(baseX+stepX,  baseY+stepY*4, btnTSUB_IMG, "", color(240), "fnTSUB");
   btnASEQ  = new Button(baseX,        baseY+stepY*5, btnASEQ_IMG, "", color(240), "fnASEQ");
   btnGSEQ  = new Button(baseX+stepX,  baseY+stepY*5, btnGSEQ_IMG, "", color(240), "fnGSEQ");
+  btnLR    = new Button(baseX,        baseY+stepY*6, btnLR_IMG, "", color(240), "fnLR");
 
   // Forth buttons
   baseX = 8;
