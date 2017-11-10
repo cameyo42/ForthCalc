@@ -512,11 +512,25 @@ void fnINT()
   if (((n < maxNum) && (n > maxEps)) || ((n > minNum) && (n < minEps)))
   {
     lastX = digitNUM;
-    long iPart = (long) digitNUM;
-    double fPart = digitNUM - iPart;
-    double integralPart = (double) iPart;
-    double fractionalPart = fPart;
-    digitNUM = integralPart;
+    df = new DecimalFormat("#########################.#########################");
+    String n$ = df.format(n);
+    int idx = n$.indexOf(".");
+    String iPart$ = "";
+    String fPart$ = "";
+    double iPart=0, fPart=0;;
+    if (idx == -1)
+    {
+      fPart = 0;
+      iPart = digitNUM;
+    }
+    else
+    {
+      iPart$ = n$.substring(0, idx);
+      fPart$ = n$.substring(idx, n$.length());
+      iPart = Double.valueOf(iPart$);
+      fPart = Double.valueOf(fPart$);
+    }
+    digitNUM = iPart;
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
@@ -530,13 +544,25 @@ void fnFRAC()
   if (((n < maxNum) && (n > maxEps)) || ((n > minNum) && (n < minEps)))
   {
     lastX = digitNUM;
-    long iPart = (long) digitNUM;
-    println(iPart);
-    double fPart = digitNUM - iPart;
-    println(fPart);
-    double integralPart = (double) iPart;
-    double fractionalPart = fPart;
-    digitNUM = fractionalPart;
+    df = new DecimalFormat("#########################.#########################");
+    String n$ = df.format(n);
+    int idx = n$.indexOf(".");
+    String iPart$ = "";
+    String fPart$ = "";
+    double iPart=0, fPart=0;;
+    if (idx == -1)
+    {
+      fPart = 0;
+      iPart = digitNUM;
+    }
+    else
+    {
+      iPart$ = n$.substring(0, idx);
+      fPart$ = n$.substring(idx, n$.length());
+      iPart = Double.valueOf(iPart$);
+      fPart = Double.valueOf(fPart$);
+    }
+    digitNUM = fPart;
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
@@ -1823,7 +1849,7 @@ void fnASEQ()
       outputSTR = "Arithmetic sequence: bad numbers.";
     }
     else
-    { 
+    {
       step = pila.pop();
       x0 = pila.pop();
       for (int i=0; i<n-1; i++)
@@ -1834,7 +1860,7 @@ void fnASEQ()
       outputSTR = String.valueOf(digitNUM);
       isResult = true;
       isBlocked = false;
-    }  
+    }
   }
   else { outputSTR = "Arithmetic sequence: three numbers required."; }
 }
@@ -1853,7 +1879,7 @@ void fnGSEQ()
       outputSTR = "Geometric sequence: bad numbers.";
     }
     else
-    { 
+    {
       ratio = pila.pop();
       x0 = pila.pop();
       for (int i=0; i<n-1; i++)
@@ -1872,7 +1898,7 @@ void fnGSEQ()
 // Decimal to Binary
 void fnTOBIN()
 {
-  if (digitNUM > 4095 || digitNUM < 0) // 111111111111 in binary 
+  if (digitNUM > 4095 || digitNUM < 0) // 111111111111 in binary
   {
     outputSTR = "To Binary: number out of range [0,4095].";
   }
@@ -1902,7 +1928,7 @@ void fnTODEC()
   {
     int n = (int) digitNUM;
     df = new DecimalFormat("#########################");
-    String n$ = df.format(digitNUM);  
+    String n$ = df.format(digitNUM);
     boolean ok = true;
     for (int i=0; i<n$.length(); i++)
     {
@@ -1916,11 +1942,11 @@ void fnTODEC()
       outputSTR = String.valueOf(digitNUM);
       outputSTR = n$;
       isResult = true;
-      isBlocked = false;  
+      isBlocked = false;
     }
     else
     {
       outputSTR = "To Decimal: only 0 and 1 for binary number.";
     }
-  }  
+  }
 }

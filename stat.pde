@@ -1,5 +1,5 @@
 //  ---------- STATISTIC FUNCTIONS ----------
-// Calculate Number of items, Sum, Mean, Media, Mode, Variance and Standard Deviation of all numbers on stack
+// Calculate Number of items, Sum, Minimum, Maximum, Mean, Media, (Mode), Variance and Standard Deviation of all numbers on stack
 void fnSTAT()
 {
   if (pila.stackSize() > 0)
@@ -16,17 +16,21 @@ void fnSTAT()
     // calculate statistic parameters
     Arrays.sort(lista); // sort array
     double somma = sum(lista);
+    double minimo = minimum(lista);
+    double massimo = maximum(lista);
     double media = mean(lista);
     double mediana = median(lista);
-    double moda = mode(lista);
+    //double moda = mode(lista);
     double varianza = variance(lista);
     double stddev = Math.sqrt(varianza);
     // write results on stack
     pila.push(stddev);
     pila.push(varianza);
-    pila.push(moda);
+    //pila.push(moda);
     pila.push(mediana);
     pila.push(media);
+    pila.push(massimo);
+    pila.push(minimo);
     pila.push(somma);
     digitNUM = items;
     outputSTR = String.valueOf(digitNUM);
@@ -45,6 +49,28 @@ double sum(double[] m)
     sum += m[i];
   }
   return sum;
+}
+
+// MIN
+double minimum(double[] m)
+{
+  double minValue = m[0];;
+  for (int i = 0; i < m.length; i++)
+  {
+    if (m[i] < minValue) { minValue = m[i]; }
+  }
+  return minValue;
+}
+
+// MAX
+double maximum(double[] m)
+{
+  double maxValue = m[0];;
+  for (int i = 0; i < m.length; i++)
+  {
+    if (m[i] > maxValue) { maxValue = m[i]; }
+  }
+  return maxValue;
 }
 
 // MEAN
