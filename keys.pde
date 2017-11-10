@@ -16,7 +16,7 @@ void keyPressed()
     //fnTADD();
     //fnASEQ();    
     //fnTOBIN();
-    fnLR();
+    fnDIST();
   }
   
   if (key == ']') // test
