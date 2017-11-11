@@ -1,8 +1,7 @@
 //  ---------- CARTESIAN FUNCTION ----------
 // dati due punti (x1,y1) e (x2,y2)
-// calcolo distanza e pendenza
-// calcolo parametri retta y = m*x + q
-void fnDIST()
+// calcolo distanza e pendenza e parametri della retta y = m*x + q
+void fnSLOPE()
 {
   if (pila.stackSize() > 2)
   {
@@ -15,7 +14,6 @@ void fnDIST()
     x2 = pila.pop();
     y1 = pila.pop();
     x1 = pila.pop();
-    println(x1,y1,x2,y2);
     // calculate distance
     dd = Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
     // calculate slope (pendenza)
@@ -39,7 +37,7 @@ void fnDIST()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Distance 3D: at least six numbers required."; }
+  else { outputSTR = "Slope: four numbers required."; }
 }
 
 

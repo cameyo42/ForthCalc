@@ -16,7 +16,8 @@ void keyPressed()
     //fnTADD();
     //fnASEQ();    
     //fnTOBIN();
-    fnDIST();
+    //fnDIST();
+    fnSTOALL();
   }
   
   if (key == ']') // test
@@ -27,6 +28,7 @@ void keyPressed()
     //fnGSEQ();
     //fnGSEQ();
     //fnTODEC();
+    fnRCLALL();
   }
 
   if (key == ';') // test
@@ -34,6 +36,7 @@ void keyPressed()
     //fnTRIANGLE();
     //fnCXDIV();
     //fnCXMUL();
+    //fnPRINTMEM();
   }
 
   // Sound keys (on/off)

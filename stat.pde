@@ -151,11 +151,11 @@ void fnLR()
       listaY[i] = pila.pop();
       listaX[i] = pila.pop();
     }
-    println(items);
-    for (int i=0; i<items; i++)
-    {
-      println(listaX[i],listaY[i]);
-    }
+    //println(items);
+    //for (int i=0; i<items; i++)
+    //{
+    //  println(listaX[i],listaY[i]);
+    //}
     // calculate statistic parameters
     //Arrays.sort(listaX); // sort array
     //Arrays.sort(listaY); // sort array
@@ -170,7 +170,7 @@ void fnLR()
       mediaX += listaX[i];
       mediaY += listaY[i];
       sommaXY = sommaXY + listaX[i]*listaY[i];
-      println(listaX[i]*listaY[i]);
+      //println(listaX[i]*listaY[i]);
       X2 = X2 + listaX[i]*listaX[i];
       Y2 = Y2 + listaY[i]*listaY[i];
     }
@@ -181,25 +181,25 @@ void fnLR()
     mediaY2 = Y2 / listaY.length;
     mediaXY = sommaXY / listaX.length;
     
-    println("medie=",mediaX, mediaY);
-    println("sommaXY=",sommaXY);
-    println("X2=",X2);
+    //println("medie=",mediaX, mediaY);
+    //println("sommaXY=",sommaXY);
+    //println("X2=",X2);
     if ((X2/items - mediaX*mediaX) == 0) { b = 0; }
     else { b = ((sommaXY/items) - mediaX*mediaY) / (X2/items - mediaX*mediaX); }
     a = mediaY - b*mediaX;
-    println(a,b);
+    //println(a,b);
     // coefficiente di correlazione
-    println(mediaX,mediaY,mediaX2,mediaY2,mediaXY);
+    //println(mediaX,mediaY,mediaX2,mediaY2,mediaXY);
     double R = 0.0;
     double sX = 0.0, sY = 0.0, sXY = 0.0;
     sX = mediaX2 - mediaX*mediaX;
     sY = mediaY2 - mediaY*mediaY;
     sXY = mediaXY - mediaX*mediaY;
-    println(sX,sY,sXY);
+    //println(sX,sY,sXY);
     if (sX == 0 || sY == 0 || sX*sY < 0 ) { R = 0; }
     else { R = sXY/Math.sqrt(sX*sY); }
-    println("correlazione = ", R);
-    println(Math.toDegrees(Math.atan(b)));
+    //println("correlazione = ", R);
+    //println(Math.toDegrees(Math.atan(b)));
     // write results on stack
     pila.push(R);
     pila.push(b);

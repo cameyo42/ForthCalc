@@ -206,6 +206,9 @@ void showGUI()
   btnTRIANGLE.show();
 
   // column buttons
+  btnSTOALL.show();
+  btnRCLALL.show();
+  
   btnPERC.show();
   btnDELTA.show();
   btnCXADD.show();
@@ -219,6 +222,7 @@ void showGUI()
   btnASEQ.show();
   btnGSEQ.show();
   btnLR.show();
+  btnSLOPE.show();
 
   // Forth
   btnDUP.show();

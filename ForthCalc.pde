@@ -73,7 +73,8 @@ int numFloating;
 // trig in degrees
 boolean inDegrees;
 // Memory 1..5
-double mem1, mem2, mem3, mem4, mem5;
+int Nmem = 5;
+Double[] mem = new Double[Nmem];
 
 // GUI
 int baseX, baseY;
@@ -157,6 +158,9 @@ PImage btnASEQ_IMG, btnGSEQ_IMG;
 Button btnLR;
 PImage btnLR_IMG;
 
+Button btnSLOPE;
+PImage btnSLOPE_IMG;
+
 // Forth Buttons
 Button btnDUP, btnDROP, btnSWAP, btnOVER, btnROT, btnNIP, btnTUCK;
 PImage btnDUP_IMG, btnDROP_IMG, btnSWAP_IMG, btnOVER_IMG, btnROT_IMG, btnNIP_IMG, btnTUCK_IMG;
@@ -169,10 +173,10 @@ Button btnCLEAR, btnSAVE, btnLOAD, btnHELP;
 PImage btnCLEAR_IMG, btnSAVE_IMG, btnLOAD_IMG, btnHELP_IMG;
 
 // Store & Recall buttons
-Button btnSTO1, btnSTO2, btnSTO3, btnSTO4, btnSTO5;
-PImage btnSTO1_IMG, btnSTO2_IMG, btnSTO3_IMG, btnSTO4_IMG, btnSTO5_IMG;
-Button btnRCL1, btnRCL2, btnRCL3, btnRCL4, btnRCL5;
-PImage btnRCL1_IMG, btnRCL2_IMG, btnRCL3_IMG, btnRCL4_IMG, btnRCL5_IMG;
+Button btnSTO1, btnSTO2, btnSTO3, btnSTO4, btnSTO5, btnSTOALL;
+PImage btnSTO1_IMG, btnSTO2_IMG, btnSTO3_IMG, btnSTO4_IMG, btnSTO5_IMG, btnSTOALL_IMG;
+Button btnRCL1, btnRCL2, btnRCL3, btnRCL4, btnRCL5, btnRCLALL;
+PImage btnRCL1_IMG, btnRCL2_IMG, btnRCL3_IMG, btnRCL4_IMG, btnRCL5_IMG, btnRCLALL_IMG;
 
 //*********************************
 void setup()
@@ -199,6 +203,7 @@ void setup()
   outputFont = createFont("Courier New Bold", 14);
   textFont(digitFont);
   // set global variables
+  for(int i=0; i<5; i++) { mem[i] = null; }
   viewShortcuts = false;
   numFloating = -1;
   digitRESET = "0." + nf(0, numFloating);
@@ -352,6 +357,9 @@ void mousePressed()
   btnRND.onClick();
 
   // column buttons
+  btnSTOALL.onClick();
+  btnRCLALL.onClick();
+    
   btnPERC.onClick();
   btnDELTA.onClick();
   btnCXADD.onClick();
@@ -365,6 +373,7 @@ void mousePressed()
   btnASEQ.onClick();
   btnGSEQ.onClick();
   btnLR.onClick();
+  btnSLOPE.onClick();
   
   // Forth
   btnDUP.onClick();

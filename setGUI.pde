@@ -108,6 +108,10 @@ void setGUI()
   btnASEQ_IMG = guiIMG.get(296, 645, 37, 33);
   btnGSEQ_IMG = guiIMG.get(333, 645, 37, 33);
   btnLR_IMG   = guiIMG.get(370, 645, 37, 33);
+  btnSLOPE_IMG   = guiIMG.get(407, 645, 37, 33);
+  
+  btnSTOALL_IMG = guiIMG.get(0, 678, 37, 33);
+  btnRCLALL_IMG = guiIMG.get(37, 678, 37, 33);
   
 
   // Forth Image Buttons
@@ -288,6 +292,10 @@ void setGUI()
   btnASEQ  = new Button(baseX,        baseY+stepY*5, btnASEQ_IMG, "", color(240), "fnASEQ");
   btnGSEQ  = new Button(baseX+stepX,  baseY+stepY*5, btnGSEQ_IMG, "", color(240), "fnGSEQ");
   btnLR    = new Button(baseX,        baseY+stepY*6, btnLR_IMG, "", color(240), "fnLR");
+  btnSLOPE = new Button(baseX+stepX,  baseY+stepY*6, btnSLOPE_IMG, "", color(240), "fnSLOPE");
+  
+  btnSTOALL = new Button(baseX,        baseY+stepY*12, btnSTOALL_IMG, "", color(240), "fnSTOALL");
+  btnRCLALL = new Button(baseX+stepX,  baseY+stepY*12, btnRCLALL_IMG, "", color(240), "fnRCLALL");
 
   // Forth buttons
   baseX = 8;

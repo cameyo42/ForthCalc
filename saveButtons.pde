@@ -129,7 +129,9 @@ void saveButtons()
   //btnCXPOW_IMG.save("btnCXPOW_IMG.png");
   //btnTADD_IMG.save("btnTADD_IMG.png");
   //btnTSUB_IMG.save("btnTSUB_IMG.png"); 
-  btnASEQ_IMG.save("btnASEQ_IMG.png"); 
-  btnGSEQ_IMG.save("btnGSEQ_IMG.png"); 
-  
+  //btnASEQ_IMG.save("btnASEQ_IMG.png"); 
+  //btnGSEQ_IMG.save("btnGSEQ_IMG.png"); 
+  //btnSTOALL_IMG.save("btnSTOALL_IMG.png"); 
+  //btnRCLALL_IMG.save("btnRCLALL_IMG.png");
+  //btnSLOPE_IMG.save("btnSLOPE_IMG.png"); 
 }  
