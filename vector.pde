@@ -40,20 +40,24 @@ void fnSLOPE()
   else { outputSTR = "Slope: four numbers required."; }
 }
 
-
 //  ---------- VECTOR FUNCTIONS ----------
 // Addition, Subtraction scal product, dot product
 void fnVECADD()
 {
-  if (pila.stackSize() > 4)
+  if (pila.stackSize() > 2)
   {
     lastX = digitNUM;
-
+    double x1=0.0, y1=0.0;
+    double x2=0.0, y2=0.0;
+    y2 = digitNUM;
+    x2 = pila.pop();
+    y1 = pila.pop();
+    x1 = pila.pop();       
     digitNUM = 0;
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Vector addition: at least six numbers required."; }
+  else { outputSTR = "Vector addition: at least four numbers required."; }
 }
 

@@ -84,7 +84,7 @@ void saveButtons()
   //btnCEQ_IMG     .save("btnCEQ_IMG     .png");
   //btnCBRT_IMG    .save("btnCBRT_IMG    .png");
   //btnEEX_IMG     .save("btnEEX_IMG     .png");
-  //btnFRACTGEN_IMG.save("btnFRACTGEN_IMG.png");
+  btnFRACTGEN_IMG.save("btnFRACTGEN_IMG.png");
   //btnDUP_IMG.save("btnDUP_IMG.png");
   //btnDROP_IMG.save("btnDROP_IMG.png");
   //btnSWAP_IMG.save("btnSWAP_IMG.png");
@@ -131,6 +131,7 @@ void saveButtons()
   //btnTSUB_IMG.save("btnTSUB_IMG.png"); 
   //btnASEQ_IMG.save("btnASEQ_IMG.png"); 
   //btnGSEQ_IMG.save("btnGSEQ_IMG.png"); 
+  btnLR_IMG.save("btnLR_IMG.png"); 
   //btnSTOALL_IMG.save("btnSTOALL_IMG.png"); 
   //btnRCLALL_IMG.save("btnRCLALL_IMG.png");
   //btnSLOPE_IMG.save("btnSLOPE_IMG.png"); 

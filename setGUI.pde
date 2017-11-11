@@ -58,7 +58,8 @@ void setGUI()
   btnE_IMG = guiIMG.get(444, 66, 37, 33);
   btnPHI_IMG = guiIMG.get(481, 66, 37, 33);
   btnLASTX_IMG = guiIMG.get(518, 66, 37, 33);
-  btnFIX_IMG = guiIMG.get(555, 66, 37, 33);
+  //btnFIX_IMG = guiIMG.get(555, 66, 37, 33);
+  btnFIX_IMG = guiIMG.get(630, 13, 60, 28);
 
   btnINT_IMG = guiIMG.get(0, 99, 37, 33);
   btnFRAC_IMG = guiIMG.get(37, 99, 37, 33);
@@ -270,32 +271,36 @@ void setGUI()
   btnPERM      = new Button(baseX+stepX*2, baseY, btnPERM_IMG, "", color(240), "fnPERM");
   btnCOMB      = new Button(baseX+stepX*3, baseY, btnCOMB_IMG, "", color(240), "fnCOMB");
   btnSTAT      = new Button(baseX+stepX*4, baseY, btnSTAT_IMG, "", color(240), "fnSTAT");
-  btnRND       = new Button(baseX+stepX*5, baseY, btnRND_IMG, "", color(240), "fnRND");
-  btnFIX       = new Button(baseX+stepX*6, baseY, btnFIX_IMG, "", color(240), "fnFIX");
+  btnLR        = new Button(baseX+stepX*5, baseY,  btnLR_IMG, "", color(240), "fnLR");  
+  btnRND       = new Button(baseX+stepX*6, baseY, btnRND_IMG, "", color(240), "fnRND");
+  //btnFIX       = new Button(baseX+stepX*6, baseY, btnFIX_IMG, "", color(240), "fnFIX");
 
   // Column buttons
+  btnFIX    = new Button(909, 16, btnFIX_IMG, "", color(240), "fnFIX");  
   baseX = 909;
-  baseY = 16;
+  //baseY = 16;
+  //baseY = 40;
+  baseY = 48;
   stepX = 44;
   stepY = 36;
-
-  btnPERC  = new Button(baseX,        baseY, btnPERC_IMG, "", color(240), "fnPERC");
-  btnDELTA = new Button(baseX+stepX,  baseY, btnDELTA_IMG, "", color(240), "fnDELTA");  
-  btnCXADD = new Button(baseX,        baseY+stepY, btnCXADD_IMG, "", color(240), "fnCXADD");
-  btnCXSUB = new Button(baseX+stepX,  baseY+stepY, btnCXSUB_IMG, "", color(240), "fnCXSUB");
-  btnCXMUL = new Button(baseX,        baseY+stepY*2, btnCXMUL_IMG, "", color(240), "fnCXMUL");
-  btnCXDIV = new Button(baseX+stepX,  baseY+stepY*2, btnCXDIV_IMG, "", color(240), "fnCXDIV");
-  btnCXINV = new Button(baseX,        baseY+stepY*3, btnCXINV_IMG, "", color(240), "fnCXINV");
-  btnCXPOW = new Button(baseX+stepX,  baseY+stepY*3, btnCXPOW_IMG, "", color(240), "fnCXPOW");
-  btnTADD  = new Button(baseX,        baseY+stepY*4, btnTADD_IMG, "", color(240), "fnTADD");
-  btnTSUB  = new Button(baseX+stepX,  baseY+stepY*4, btnTSUB_IMG, "", color(240), "fnTSUB");
-  btnASEQ  = new Button(baseX,        baseY+stepY*5, btnASEQ_IMG, "", color(240), "fnASEQ");
-  btnGSEQ  = new Button(baseX+stepX,  baseY+stepY*5, btnGSEQ_IMG, "", color(240), "fnGSEQ");
-  btnLR    = new Button(baseX,        baseY+stepY*6, btnLR_IMG, "", color(240), "fnLR");
-  btnSLOPE = new Button(baseX+stepX,  baseY+stepY*6, btnSLOPE_IMG, "", color(240), "fnSLOPE");
   
-  btnSTOALL = new Button(baseX,        baseY+stepY*12, btnSTOALL_IMG, "", color(240), "fnSTOALL");
-  btnRCLALL = new Button(baseX+stepX,  baseY+stepY*12, btnRCLALL_IMG, "", color(240), "fnRCLALL");
+  btnSTOALL = new Button(baseX,        baseY,         btnSTOALL_IMG, "", color(240), "fnSTOALL");
+  btnRCLALL = new Button(baseX+stepX,  baseY,         btnRCLALL_IMG, "", color(240), "fnRCLALL");
+  btnPERC   = new Button(baseX,        baseY+stepY,   btnPERC_IMG, "", color(240), "fnPERC");
+  btnDELTA  = new Button(baseX+stepX,  baseY+stepY,   btnDELTA_IMG, "", color(240), "fnDELTA");  
+  btnCXADD  = new Button(baseX,        baseY+stepY*2, btnCXADD_IMG, "", color(240), "fnCXADD");
+  btnCXSUB  = new Button(baseX+stepX,  baseY+stepY*2, btnCXSUB_IMG, "", color(240), "fnCXSUB");
+  btnCXMUL  = new Button(baseX,        baseY+stepY*3, btnCXMUL_IMG, "", color(240), "fnCXMUL");
+  btnCXDIV  = new Button(baseX+stepX,  baseY+stepY*3, btnCXDIV_IMG, "", color(240), "fnCXDIV");
+  btnCXINV  = new Button(baseX,        baseY+stepY*4, btnCXINV_IMG, "", color(240), "fnCXINV");
+  btnCXPOW  = new Button(baseX+stepX,  baseY+stepY*4, btnCXPOW_IMG, "", color(240), "fnCXPOW");
+  btnTADD   = new Button(baseX,        baseY+stepY*5, btnTADD_IMG, "", color(240), "fnTADD");
+  btnTSUB   = new Button(baseX+stepX,  baseY+stepY*5, btnTSUB_IMG, "", color(240), "fnTSUB");
+  btnASEQ   = new Button(baseX,        baseY+stepY*6, btnASEQ_IMG, "", color(240), "fnASEQ");
+  btnGSEQ   = new Button(baseX+stepX,  baseY+stepY*6, btnGSEQ_IMG, "", color(240), "fnGSEQ");
+  //btnLR     = new Button(baseX,        baseY+stepY*7,  btnLR_IMG, "", color(240), "fnLR");
+  btnSLOPE  = new Button(baseX+stepX,  baseY+stepY*7,  btnSLOPE_IMG, "", color(240), "fnSLOPE");
+  
 
   // Forth buttons
   baseX = 8;

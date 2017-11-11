@@ -521,6 +521,9 @@ void fnsaveFILE()
   saveStrings(dataPath(filename), outLST);
   filename = "stack.lst";
   saveStrings(dataPath(filename), outLST);
+  isResult = true;
+  isBlocked = false;
+  loop();
 }
 
 void fnHELP()
