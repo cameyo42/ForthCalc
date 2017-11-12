@@ -164,7 +164,7 @@ void fnLR()
     double sommaXY = 0.0; double mediaXY = 0.0;
     double X2 = 0.0; double mediaX2 = 0.0;
     double Y2 = 0.0; double mediaY2 = 0.0;
-    
+
     for (int i = 0; i < listaX.length; i++)
     {
       mediaX += listaX[i];
@@ -174,13 +174,13 @@ void fnLR()
       X2 = X2 + listaX[i]*listaX[i];
       Y2 = Y2 + listaY[i]*listaY[i];
     }
-    
+
     mediaX = mediaX / listaX.length;
     mediaY = mediaY / listaY.length;
     mediaX2 = X2 / listaX.length;
     mediaY2 = Y2 / listaY.length;
     mediaXY = sommaXY / listaX.length;
-    
+
     //println("medie=",mediaX, mediaY);
     //println("sommaXY=",sommaXY);
     //println("X2=",X2);

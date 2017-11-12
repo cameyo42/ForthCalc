@@ -1,6 +1,8 @@
 //  ---------- CARTESIAN FUNCTION ----------
 // dati due punti (x1,y1) e (x2,y2)
 // calcolo distanza e pendenza e parametri della retta y = m*x + q
+// using processing core function for Vectors (float)
+
 void fnSLOPE()
 {
   if (pila.stackSize() > 2)
@@ -41,23 +43,144 @@ void fnSLOPE()
 }
 
 //  ---------- VECTOR FUNCTIONS ----------
-// Addition, Subtraction scal product, dot product
+// Addition, Subtraction, scalar product, dot product, magnitude, angle, angle between vectors
 void fnVECADD()
 {
   if (pila.stackSize() > 2)
   {
     lastX = digitNUM;
-    double x1=0.0, y1=0.0;
-    double x2=0.0, y2=0.0;
-    y2 = digitNUM;
-    x2 = pila.pop();
-    y1 = pila.pop();
-    x1 = pila.pop();       
-    digitNUM = 0;
+    PVector v1, v2;
+    float x1=0.0, y1=0.0;
+    float x2=0.0, y2=0.0;
+    y2 = (float) digitNUM;
+    x2 = (float) pila.pop();
+    y1 = (float) pila.pop();
+    x1 = (float) pila.pop();
+    v1 = new PVector(x1, y1);
+    v2 = new PVector(x2, y2);
+    PVector v3 = PVector.add(v1, v2);
+    pila.push(v3.y);
+    digitNUM = v3.x;
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Vector addition: at least four numbers required."; }
+  else { outputSTR = "Vector addition: four numbers required."; }
 }
+
+void fnVECSUB()
+{
+  if (pila.stackSize() > 2)
+  {
+    lastX = digitNUM;
+    PVector v1, v2;
+    float x1=0.0, y1=0.0;
+    float x2=0.0, y2=0.0;
+    y2 = (float) digitNUM;
+    x2 = (float) pila.pop();
+    y1 = (float) pila.pop();
+    x1 = (float) pila.pop();
+    v1 = new PVector(x1, y1);
+    v2 = new PVector(x2, y2);
+    PVector v3 = PVector.sub(v1, v2);
+    pila.push(v3.y);
+    digitNUM = v3.x;
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+  else { outputSTR = "Vectors subtraction:  four numbers required."; }
+}
+
+void fnVECCRO()
+{
+  if (pila.stackSize() > 2)
+  {
+    lastX = digitNUM;
+    PVector v1, v2;
+    float x1=0.0, y1=0.0;
+    float x2=0.0, y2=0.0;
+    y2 = (float) digitNUM;
+    x2 = (float) pila.pop();
+    y1 = (float) pila.pop();
+    x1 = (float) pila.pop();
+    v1 = new PVector(x1, y1);
+    v2 = new PVector(x2, y2);
+    PVector v3 = v1.cross(v2);
+    pila.push(v3.y);
+    digitNUM = v3.x;
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+  else { outputSTR = "Vectors cross product: four numbers required."; }
+}
+
+void fnVECDOT()
+{
+  if (pila.stackSize() > 2)
+  {
+    lastX = digitNUM;
+    PVector v1, v2;
+    float x1=0.0, y1=0.0;
+    float x2=0.0, y2=0.0;
+    y2 = (float) digitNUM;
+    x2 = (float) pila.pop();
+    y1 = (float) pila.pop();
+    x1 = (float) pila.pop();
+    v1 = new PVector(x1, y1);
+    v2 = new PVector(x2, y2);
+    float dot = v1.dot(v2);
+    digitNUM = dot;
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+  else { outputSTR = "Vectors dot product: four numbers required."; }
+}
+
+void fnVECANG()
+{
+  if (pila.stackSize() > 2)
+  {
+    lastX = digitNUM;
+    PVector v1, v2;
+    float x1=0.0, y1=0.0;
+    float x2=0.0, y2=0.0;
+    y2 = (float) digitNUM;
+    x2 = (float) pila.pop();
+    y1 = (float) pila.pop();
+    x1 = (float) pila.pop();
+    v1 = new PVector(x1, y1);
+    v2 = new PVector(x2, y2);
+    float angle = PVector.angleBetween(v1, v2);
+    digitNUM = angle;
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+  else { outputSTR = "Vectors Angle between: four numbers required."; }
+}
+
+void fnVECMAG()
+{
+  if (pila.stackSize() > 0)
+  {
+    lastX = digitNUM;
+    float x1=0.0, y1=0.0;
+    y1 = (float) digitNUM;
+    x1 = (float) pila.pop();
+    PVector v = new PVector(x1, y1);
+    float magnitude = v.mag();
+    float angle = v.heading();
+    if (inDegrees) { angle = degrees(angle); }
+    pila.push(angle);
+    digitNUM = magnitude;
+    outputSTR = String.valueOf(digitNUM);
+    isResult = true;
+    isBlocked = false;
+  }
+  else { outputSTR = "Vector Magnitude and Heading: two numbers required."; }
+}
+
 

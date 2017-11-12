@@ -332,7 +332,7 @@ void fnCOPYS()
     pila.push(clipboard[i]);
   }
   isResult = true;
-  isBlocked = false;  
+  isBlocked = false;
 }
 
 // Paste Stack
@@ -355,7 +355,7 @@ void fnPASTES()
 {
   lastX = digitNUM;
   //pila.clearStack();
-  if (!isBlocked && isResult) { pila.push(digitNUM); }  
+  if (!isBlocked && isResult) { pila.push(digitNUM); }
   //pila.push(digitNUM);
   for (int i=clipboardItems-1; i >= 0; i--)
   {
@@ -546,10 +546,10 @@ void fnSTO2() { mem[1] = digitNUM; outputSTR = String.valueOf(digitNUM); isResul
 void fnSTO3() { mem[2] = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
 void fnSTO4() { mem[3] = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
 void fnSTO5() { mem[4] = digitNUM; outputSTR = String.valueOf(digitNUM); isResult = true; isBlocked = false; }
-                    
+
 void fnRCL1()
 {
-  if (mem[0] != null) 
+  if (mem[0] != null)
   {
     lastX = digitNUM;
     if (!isBlocked && isResult) { pila.push(digitNUM); }
@@ -558,11 +558,11 @@ void fnRCL1()
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
-  }  
+  }
 }
 void fnRCL2()
 {
-  if (mem[1] != null) 
+  if (mem[1] != null)
   {
     lastX = digitNUM;
     if (!isBlocked && isResult) { pila.push(digitNUM); }
@@ -571,11 +571,11 @@ void fnRCL2()
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
-  }  
+  }
 }
 void fnRCL3()
 {
-  if (mem[2] != null) 
+  if (mem[2] != null)
   {
     lastX = digitNUM;
     if (!isBlocked && isResult) { pila.push(digitNUM); }
@@ -588,7 +588,7 @@ void fnRCL3()
 }
 void fnRCL4()
 {
-  if (mem[3] != null) 
+  if (mem[3] != null)
   {
     lastX = digitNUM;
     if (!isBlocked && isResult) { pila.push(digitNUM); }
@@ -597,11 +597,11 @@ void fnRCL4()
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
-  }  
+  }
 }
 void fnRCL5()
 {
-  if (mem[4] != null) 
+  if (mem[4] != null)
   {
     lastX = digitNUM;
     if (!isBlocked && isResult) { pila.push(digitNUM); }
@@ -610,7 +610,7 @@ void fnRCL5()
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
-  }  
+  }
 }
 
 // write mem1..mem5 on stack
@@ -620,11 +620,11 @@ void fnRCLALL()
   double[] v = new double[Nmem];
   for(int i=0; i<Nmem; i++)
   {
-    if (mem[i] != null) 
-    { 
-      v[i] = mem[i]; 
-      valid++; 
-    } 
+    if (mem[i] != null)
+    {
+      v[i] = mem[i];
+      valid++;
+    }
   }
   if (valid > 0)
   {
@@ -633,7 +633,7 @@ void fnRCLALL()
     for (int i=valid-1; i>=1 ; i--)
     {
       pila.push(v[i]);
-    }  
+    }
     digitNUM = v[0];
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
@@ -652,15 +652,15 @@ void fnSTOALL()
     mem[i+1] = pila.getItem(i);
   }
   isResult = true;
-  isBlocked = false;  
+  isBlocked = false;
 }
 
 void fnPRINTMEM()
 {
   println();
   for(int i=0; i<Nmem; i++)
-  { 
-    print(mem[i]+","); 
+  {
+    print(mem[i]+",");
   }
   println();
 }

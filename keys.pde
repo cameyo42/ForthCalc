@@ -14,12 +14,13 @@ void keyPressed()
     //fnTRIANGLE();
     //fnCXINV();
     //fnTADD();
-    //fnASEQ();    
+    //fnASEQ();
     //fnTOBIN();
     //fnDIST();
-    fnSTOALL();
+    //fnSTOALL();
+    fnVECADD();
   }
-  
+
   if (key == ']') // test
   {
     //fnTRIANGLE();
@@ -28,7 +29,8 @@ void keyPressed()
     //fnGSEQ();
     //fnGSEQ();
     //fnTODEC();
-    fnRCLALL();
+    //fnRCLALL();
+    //fnVECSUB();
   }
 
   if (key == ';') // test

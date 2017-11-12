@@ -79,7 +79,7 @@ void fnTRIANGLE()
           gamma1 = Math.toDegrees(gamma1);
         }
       }
-     
+
       if (alfa1 != -1) // push second solution on stack
       {
         pila.push(gamma1);
@@ -110,12 +110,12 @@ void fnTRIANGLE()
       pila.push(aalfa);
       pila.push(bbeta);
       digitNUM = ggamma;
-      outputSTR = stato; 
+      outputSTR = stato;
       isResult = true;
       isBlocked = false;
     }
   }
-  else 
+  else
   {
     outputSTR = "Triangle: six numbers required.";
   }

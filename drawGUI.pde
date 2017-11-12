@@ -194,8 +194,8 @@ void showGUI()
   btnPERM.show();
   btnCOMB.show();
   btnSTAT.show();
+  btnLR.show();
   btnRND.show();
-  btnFIX.show();
 
   btnFRACTADD.show();
   btnFRACTSUB.show();
@@ -206,9 +206,9 @@ void showGUI()
   btnTRIANGLE.show();
 
   // column buttons
+  btnFIX.show();
   btnSTOALL.show();
   btnRCLALL.show();
-  
   btnPERC.show();
   btnDELTA.show();
   btnCXADD.show();
@@ -217,11 +217,16 @@ void showGUI()
   btnCXDIV.show();
   btnCXINV.show();
   btnCXPOW.show();
+  btnVECADD.show();
+  btnVECSUB.show();
+  btnVECCRO.show();
+  btnVECDOT.show();
+  btnVECANG.show();
+  btnVECMAG.show();
   btnTADD.show();
   btnTSUB.show();
   btnASEQ.show();
   btnGSEQ.show();
-  btnLR.show();
   btnSLOPE.show();
 
   // Forth

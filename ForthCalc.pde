@@ -131,8 +131,8 @@ PImage btnQEQ_IMG, btnGCD_IMG, btnLCM_IMG, btnFACTORIZE_IMG, btnPROP_IMG;
 Button btnRECT, btnPOLAR;
 PImage btnRECT_IMG, btnPOLAR_IMG;
 
-Button btnBINOMIAL, btnPERM, btnCOMB, btnFIBO, btnSTAT;
-PImage btnBINOMIAL_IMG, btnPERM_IMG, btnCOMB_IMG, btnFIBO_IMG, btnSTAT_IMG;
+Button btnBINOMIAL, btnPERM, btnCOMB, btnFIBO;
+PImage btnBINOMIAL_IMG, btnPERM_IMG, btnCOMB_IMG, btnFIBO_IMG;
 
 Button btnFRACTADD, btnFRACTSUB, btnFRACTMUL, btnFRACTDIV, btnFRACTGEN;
 PImage btnFRACTADD_IMG, btnFRACTSUB_IMG, btnFRACTMUL_IMG, btnFRACTDIV_IMG, btnFRACTGEN_IMG;
@@ -149,14 +149,17 @@ PImage btnEEX_IMG, btnCBRT_IMG, btnROUND_IMG;
 Button btnCXADD, btnCXSUB, btnCXMUL, btnCXDIV, btnCXINV, btnCXPOW;
 PImage btnCXADD_IMG, btnCXSUB_IMG, btnCXMUL_IMG, btnCXDIV_IMG, btnCXINV_IMG, btnCXPOW_IMG;
 
+Button btnVECADD, btnVECSUB, btnVECCRO, btnVECDOT, btnVECANG, btnVECMAG;
+PImage btnVECADD_IMG, btnVECSUB_IMG, btnVECCRO_IMG, btnVECDOT_IMG, btnVECANG_IMG, btnVECMAG_IMG;
+
 Button btnTADD, btnTSUB;
 PImage btnTADD_IMG, btnTSUB_IMG;
 
 Button btnASEQ, btnGSEQ;
 PImage btnASEQ_IMG, btnGSEQ_IMG;
 
-Button btnLR;
-PImage btnLR_IMG;
+Button btnSTAT, btnLR;
+PImage btnSTAT_IMG, btnLR_IMG;
 
 Button btnSLOPE;
 PImage btnSLOPE_IMG;
@@ -268,7 +271,6 @@ void mousePressed()
   btnDIV.onClick();
   btnCLS.onClick();
   btnEEX.onClick();
-  btnFIX.onClick();
 
   btn4.onClick();
   btn5.onClick();
@@ -354,12 +356,13 @@ void mousePressed()
   btnPERM.onClick();
   btnCOMB.onClick();
   btnSTAT.onClick();
+  btnLR.onClick();
   btnRND.onClick();
 
   // column buttons
+  btnFIX.onClick();
   btnSTOALL.onClick();
   btnRCLALL.onClick();
-    
   btnPERC.onClick();
   btnDELTA.onClick();
   btnCXADD.onClick();
@@ -368,13 +371,18 @@ void mousePressed()
   btnCXDIV.onClick();
   btnCXINV.onClick();
   btnCXPOW.onClick();
+  btnVECADD.onClick();
+  btnVECSUB.onClick();
+  btnVECCRO.onClick();
+  btnVECDOT.onClick();
+  btnVECANG.onClick();
+  btnVECMAG.onClick();
   btnTADD.onClick();
   btnTSUB.onClick();
   btnASEQ.onClick();
   btnGSEQ.onClick();
-  btnLR.onClick();
   btnSLOPE.onClick();
-  
+
   // Forth
   btnDUP.onClick();
   btnDROP.onClick();
