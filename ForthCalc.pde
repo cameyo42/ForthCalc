@@ -470,7 +470,7 @@ String newFilename(int c)
 
 void fnloadFILE()
 {
-  String file = dataPath("stack.lst");
+  String file = dataPath("stack.txt");
   if (fileExists(file))
   {
     pila.clearStack();
@@ -499,7 +499,7 @@ void fnloadFILE()
   }
   else
   {
-    outputSTR = "File 'stack.lst' is missing.";
+    outputSTR = "File 'stack.txt' is missing.";
   }
 }
 
@@ -526,9 +526,9 @@ void fnsaveFILE()
   numero = String.valueOf(pila.getItem(items-1));
   lista = lista + numero;
   String[] outLST = split(lista, "|");
-  String filename = newFilename(2) + ".lst";
+  String filename = newFilename(2) + ".txt";
   saveStrings(dataPath(filename), outLST);
-  filename = "stack.lst";
+  filename = "stack.txt";
   saveStrings(dataPath(filename), outLST);
   isResult = true;
   isBlocked = false;
@@ -543,5 +543,16 @@ void fnHELP()
     launch(dataPath("ForthCalculator.pdf"));
   }
   else { outputSTR = "File 'ForthCalculator.pdf' is missing."; }
+  cursor(ARROW);
+}
+
+void fnEDIT()
+{
+  cursor(WAIT);
+  if (fileExists(dataPath("stack.txt")))
+  {
+    launch(dataPath("stack.txt"));
+  }
+  else { outputSTR = "File 'stack.txt' is missing."; }
   cursor(ARROW);
 }

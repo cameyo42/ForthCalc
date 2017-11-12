@@ -165,7 +165,7 @@ void setGUI()
   btnRCL4_IMG = guiIMG.get(296, 546, 37, 33);
   btnRCL5_IMG = guiIMG.get(333, 546, 37, 33);
 
-  saveButtons(); // for manual
+  // saveButtons(); // for manual
 
   // Define buttons
   int baseX = 620;

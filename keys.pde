@@ -39,6 +39,7 @@ void keyPressed()
     //fnCXDIV();
     //fnCXMUL();
     //fnPRINTMEM();
+    fnEDIT();
   }
 
   // Sound keys (on/off)

@@ -1,6 +1,5 @@
 void saveButtons()
 {
-
   //btnPLUS_IMG.save("btnPLUS_IMG.png");
   //btnMINUS_IMG.save("btnMINUS_IMG.png");
   //btnDIV_IMG.save("btnDIV_IMG.png");
@@ -51,7 +50,7 @@ void saveButtons()
   //btnE_IMG.save("btnE_IMG.png");
   //btnPHI_IMG.save("btnPHI_IMG.png");
   //btnLASTX_IMG.save("btnLASTX_IMG.png");
-  btnFIX_IMG.save("btnFIX_IMG.png");
+  //btnFIX_IMG.save("btnFIX_IMG.png");
   //btnINT_IMG.save("btnINT_IMG.png");
   //btnFRAC_IMG.save("btnFRAC_IMG.png");
   //btnFACT_IMG.save("btnFACT_IMG.png");
@@ -141,5 +140,5 @@ void saveButtons()
   //btnVECDOT_IMG.save("btnVECDOT_IMG.png");
   //btnVECANG_IMG.save("btnVECANG_IMG.png");
   //btnVECMAG_IMG.save("btnVECMAG_IMG.png");  
-  btnX_Y_IMG.save("btnX_Y_IMG.png");  
+  //btnX_Y_IMG.save("btnX_Y_IMG.png");  
 }
