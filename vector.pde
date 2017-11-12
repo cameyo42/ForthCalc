@@ -19,7 +19,8 @@ void fnSLOPE()
     // calculate distance
     dd = Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
     // calculate slope (pendenza)
-    pp = Math.toDegrees(Math.atan2(y2-y1,x2-x1));
+    pp = Math.atan2(y2-y1,x2-x1);
+    if(inDegrees) { pp = Math.toDegrees(pp); }
     // calculate m and q (y = m*x + q)
     if ((x2 - x1) == 0.0)
     {
@@ -107,6 +108,7 @@ void fnVECCRO()
     v1 = new PVector(x1, y1);
     v2 = new PVector(x2, y2);
     PVector v3 = v1.cross(v2);
+    println(v3);
     pila.push(v3.y);
     digitNUM = v3.x;
     outputSTR = String.valueOf(digitNUM);
