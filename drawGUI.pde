@@ -206,6 +206,7 @@ void showGUI()
   btnTRIANGLE.show();
 
   // column buttons
+  btnX_Y.show();
   btnFIX.show();
   btnSTOALL.show();
   btnRCLALL.show();

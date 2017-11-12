@@ -360,6 +360,7 @@ void mousePressed()
   btnRND.onClick();
 
   // column buttons
+  btnX_Y.onClick();
   btnFIX.onClick();
   btnSTOALL.onClick();
   btnRCLALL.onClick();

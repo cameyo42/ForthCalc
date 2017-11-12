@@ -51,7 +51,7 @@ void saveButtons()
   //btnE_IMG.save("btnE_IMG.png");
   //btnPHI_IMG.save("btnPHI_IMG.png");
   //btnLASTX_IMG.save("btnLASTX_IMG.png");
-  //btnFIX_IMG.save("btnFIX_IMG.png");
+  btnFIX_IMG.save("btnFIX_IMG.png");
   //btnINT_IMG.save("btnINT_IMG.png");
   //btnFRAC_IMG.save("btnFRAC_IMG.png");
   //btnFACT_IMG.save("btnFACT_IMG.png");
@@ -84,7 +84,7 @@ void saveButtons()
   //btnCEQ_IMG     .save("btnCEQ_IMG     .png");
   //btnCBRT_IMG    .save("btnCBRT_IMG    .png");
   //btnEEX_IMG     .save("btnEEX_IMG     .png");
-  btnFRACTGEN_IMG.save("btnFRACTGEN_IMG.png");
+  //btnFRACTGEN_IMG.save("btnFRACTGEN_IMG.png");
   //btnDUP_IMG.save("btnDUP_IMG.png");
   //btnDROP_IMG.save("btnDROP_IMG.png");
   //btnSWAP_IMG.save("btnSWAP_IMG.png");
@@ -135,10 +135,11 @@ void saveButtons()
   //btnSTOALL_IMG.save("btnSTOALL_IMG.png");
   //btnRCLALL_IMG.save("btnRCLALL_IMG.png");
   //btnSLOPE_IMG.save("btnSLOPE_IMG.png");
-  btnVECADD_IMG.save("btnVECADD_IMG.png");
-  btnVECSUB_IMG.save("btnVECSUB_IMG.png");
-  btnVECCRO_IMG.save("btnVECCRO_IMG.png");
-  btnVECDOT_IMG.save("btnVECDOT_IMG.png");
-  btnVECANG_IMG.save("btnVECANG_IMG.png");
-  btnVECMAG_IMG.save("btnVECMAG_IMG.png");  
+  //btnVECADD_IMG.save("btnVECADD_IMG.png");
+  //btnVECSUB_IMG.save("btnVECSUB_IMG.png");
+  //btnVECCRO_IMG.save("btnVECCRO_IMG.png");
+  //btnVECDOT_IMG.save("btnVECDOT_IMG.png");
+  //btnVECANG_IMG.save("btnVECANG_IMG.png");
+  //btnVECMAG_IMG.save("btnVECMAG_IMG.png");  
+  btnX_Y_IMG.save("btnX_Y_IMG.png");  
 }
