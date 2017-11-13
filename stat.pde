@@ -134,6 +134,7 @@ double variance(double m[])
 
 // Linear Regression of data
 // y = a + b*x
+// y = q + m*x
 void fnLR()
 {
   if (pila.stackSize() > 0 && (pila.stackSize() & 1) != 0)
@@ -180,30 +181,21 @@ void fnLR()
     mediaX2 = X2 / listaX.length;
     mediaY2 = Y2 / listaY.length;
     mediaXY = sommaXY / listaX.length;
-
-    //println("medie=",mediaX, mediaY);
-    //println("sommaXY=",sommaXY);
-    //println("X2=",X2);
     if ((X2/items - mediaX*mediaX) == 0) { b = 0; }
     else { b = ((sommaXY/items) - mediaX*mediaY) / (X2/items - mediaX*mediaX); }
     a = mediaY - b*mediaX;
-    //println(a,b);
-    // coefficiente di correlazione
-    //println(mediaX,mediaY,mediaX2,mediaY2,mediaXY);
-    double R = 0.0;
+    // coefficiente di determinazione
+    double Rquadro = 0.0;
     double sX = 0.0, sY = 0.0, sXY = 0.0;
     sX = mediaX2 - mediaX*mediaX;
     sY = mediaY2 - mediaY*mediaY;
     sXY = mediaXY - mediaX*mediaY;
-    //println(sX,sY,sXY);
-    if (sX == 0 || sY == 0 || sX*sY < 0 ) { R = 0; }
-    else { R = sXY/Math.sqrt(sX*sY); }
-    //println("correlazione = ", R);
-    //println(Math.toDegrees(Math.atan(b)));
+    if (sX == 0 || sY == 0 || sX*sY < 0 ) { Rquadro = 0; }
+    else { Rquadro = (sXY*sXY)/(sX*sY); }
     // write results on stack
-    pila.push(R);
-    pila.push(b);
-    digitNUM = a;
+    pila.push(Rquadro);
+    pila.push(b); // m
+    digitNUM = a; // q
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;

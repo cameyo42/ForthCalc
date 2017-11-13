@@ -121,8 +121,8 @@ void setGUI()
   btnVECMAG_IMG = guiIMG.get(259, 678, 37, 33);
   btnX_Y_IMG    = guiIMG.get(296, 678, 37, 33);
   btnEDIT_IMG   = guiIMG.get(333, 678, 37, 33);
-  btnEXIT_IMG   = guiIMG.get(370, 678, 37, 33);
-
+  btnMATH_IMG   = guiIMG.get(370, 678, 37, 33);
+  btnEXIT_IMG   = guiIMG.get(407, 678, 37, 33);
 
   // Forth Image Buttons
   btnDUP_IMG = guiIMG.get(0, 513, 55, 33);
@@ -167,7 +167,7 @@ void setGUI()
   btnRCL4_IMG = guiIMG.get(296, 546, 37, 33);
   btnRCL5_IMG = guiIMG.get(333, 546, 37, 33);
 
-  // saveButtons(); // for manual
+  //saveButtons(); // for manual
 
   // Define buttons
   int baseX = 620;
@@ -311,8 +311,9 @@ void setGUI()
   btnASEQ   = new Button(baseX,        baseY+stepY*10, btnASEQ_IMG, "", color(240), "fnASEQ");
   btnGSEQ   = new Button(baseX+stepX,  baseY+stepY*10, btnGSEQ_IMG, "", color(240), "fnGSEQ");
   btnSLOPE  = new Button(baseX,        baseY+stepY*11, btnSLOPE_IMG, "", color(240), "fnSLOPE");
-  btnEDIT   = new Button(baseX,        baseY+stepY*12, btnEDIT_IMG, "", color(240), "fnEDIT");
-  btnEXIT   = new Button(baseX+stepX,  baseY+stepY*12, btnEXIT_IMG, "", color(240), "fnEXIT");
+  btnEDIT   = new Button(baseX+stepX,  baseY+stepY*11, btnEDIT_IMG, "", color(240), "fnEDIT");
+  btnMATH   = new Button(baseX,        baseY+stepY*12+6, btnMATH_IMG, "", color(240), "fnMATH");
+  btnEXIT   = new Button(baseX+stepX,  baseY+stepY*12+6, btnEXIT_IMG, "", color(240), "fnEXIT");
 
   // Forth buttons
   baseX = 8;

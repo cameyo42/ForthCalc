@@ -230,6 +230,7 @@ void showGUI()
   btnGSEQ.show();
   btnSLOPE.show();
   btnEDIT.show();
+  btnMATH.show();
   btnEXIT.show();
 
   // Forth

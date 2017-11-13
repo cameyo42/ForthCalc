@@ -159,8 +159,8 @@ PImage btnSTAT_IMG, btnLR_IMG;
 Button btnSLOPE;
 PImage btnSLOPE_IMG;
 
-Button btnEDIT, btnEXIT;
-PImage btnEDIT_IMG, btnEXIT_IMG;
+Button btnEDIT, btnMATH, btnEXIT;
+PImage btnEDIT_IMG, btnMATH_IMG, btnEXIT_IMG;
 
 // Forth Buttons
 Button btnDUP, btnDROP, btnSWAP, btnOVER, btnROT, btnNIP, btnTUCK;
@@ -232,7 +232,7 @@ void init()
 //*********************************
 void draw()
 {
-  //println("Redraw: ",frameCount);
+  println("Redraw: ",frameCount);
   if (start)
   {
     background(backCol);
@@ -382,6 +382,7 @@ void mousePressed()
   btnGSEQ.onClick();
   btnSLOPE.onClick();
   btnEDIT.onClick();
+  btnMATH.onClick();
   btnEXIT.onClick();
 
   // Forth
@@ -554,6 +555,17 @@ void fnEDIT() // edit stack.txt
     launch(dataPath("stack.txt"));
   }
   else { outputSTR = "File 'stack.txt' is missing."; }
+  cursor(ARROW);
+}
+
+void fnMATH() // open formulae.pdf
+{
+  cursor(WAIT);
+  if (fileExists(dataPath("Formulae.pdf")))
+  {
+    launch(dataPath("Formulae.pdf"));
+  }
+  else { outputSTR = "File 'Formulae.pdf' is missing."; }
   cursor(ARROW);
 }
 

@@ -140,7 +140,8 @@ void saveButtons()
   //btnVECANG_IMG.save("btnVECANG_IMG.png");
   //btnVECMAG_IMG.save("btnVECMAG_IMG.png");  
   //btnX_Y_IMG.save("btnX_Y_IMG.png");  
-  btnSLOPE_IMG.save("_btnSLOPE_IMG.png");
-  btnEDIT_IMG.save("_btnEDIT_IMG.png");
-  btnEXIT_IMG.save("_btnEXIT_IMG.png");
+  //btnSLOPE_IMG.save("_btnSLOPE_IMG.png");
+  //btnEDIT_IMG.save("_btnEDIT_IMG.png");
+  //btnMATH_IMG.save("_btnMATH_IMG.png");
+  //btnEXIT_IMG.save("_btnEXIT_IMG.png");
 }
