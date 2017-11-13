@@ -104,12 +104,12 @@ void setGUI()
   btnCXDIV_IMG = guiIMG.get(111, 645, 37, 33);
   btnCXINV_IMG = guiIMG.get(148, 645, 37, 33);
   btnCXPOW_IMG = guiIMG.get(185, 645, 37, 33);
-  btnTADD_IMG = guiIMG.get(222, 645, 37, 33);
-  btnTSUB_IMG = guiIMG.get(259, 645, 37, 33);
-  btnASEQ_IMG = guiIMG.get(296, 645, 37, 33);
-  btnGSEQ_IMG = guiIMG.get(333, 645, 37, 33);
-  btnLR_IMG   = guiIMG.get(370, 645, 37, 33);
-  btnSLOPE_IMG   = guiIMG.get(407, 645, 37, 33);
+  btnTADD_IMG  = guiIMG.get(222, 645, 37, 33);
+  btnTSUB_IMG  = guiIMG.get(259, 645, 37, 33);
+  btnASEQ_IMG  = guiIMG.get(296, 645, 37, 33);
+  btnGSEQ_IMG  = guiIMG.get(333, 645, 37, 33);
+  btnLR_IMG    = guiIMG.get(370, 645, 37, 33);
+  btnSLOPE_IMG = guiIMG.get(407, 645, 37, 33);
 
   btnSTOALL_IMG = guiIMG.get(0, 678, 37, 33);
   btnRCLALL_IMG = guiIMG.get(37, 678, 37, 33);
@@ -120,6 +120,8 @@ void setGUI()
   btnVECANG_IMG = guiIMG.get(222, 678, 37, 33);
   btnVECMAG_IMG = guiIMG.get(259, 678, 37, 33);
   btnX_Y_IMG    = guiIMG.get(296, 678, 37, 33);
+  btnEDIT_IMG   = guiIMG.get(333, 678, 37, 33);
+  btnEXIT_IMG   = guiIMG.get(370, 678, 37, 33);
 
 
   // Forth Image Buttons
@@ -309,7 +311,8 @@ void setGUI()
   btnASEQ   = new Button(baseX,        baseY+stepY*10, btnASEQ_IMG, "", color(240), "fnASEQ");
   btnGSEQ   = new Button(baseX+stepX,  baseY+stepY*10, btnGSEQ_IMG, "", color(240), "fnGSEQ");
   btnSLOPE  = new Button(baseX,        baseY+stepY*11, btnSLOPE_IMG, "", color(240), "fnSLOPE");
-
+  btnEDIT   = new Button(baseX,        baseY+stepY*12, btnEDIT_IMG, "", color(240), "fnEDIT");
+  btnEXIT   = new Button(baseX+stepX,  baseY+stepY*12, btnEXIT_IMG, "", color(240), "fnEXIT");
 
   // Forth buttons
   baseX = 8;
@@ -343,8 +346,8 @@ void setGUI()
   btnLOAD   = new Button(baseX+stepX*8, baseY+stepY*2, btnLOAD_IMG, "", color(240), "fnloadFILE");
   btnSAVE   = new Button(baseX+stepX*9, baseY+stepY*2, btnSAVE_IMG, "", color(240), "fnsaveFILE");
   btnHELP   = new Button(baseX+stepX*10, baseY+stepY*2, btnHELP_IMG, "", color(240), "fnHELP");
-
   //btnTWINS  = new Button(baseX+stepX*2, baseY+stepY*2, btnTWINS_IMG, "", color(240), "fnTWINS");
+
   // Memory buttons
   baseX = 409;
   baseY = 384;

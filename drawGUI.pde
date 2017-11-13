@@ -229,6 +229,8 @@ void showGUI()
   btnASEQ.show();
   btnGSEQ.show();
   btnSLOPE.show();
+  btnEDIT.show();
+  btnEXIT.show();
 
   // Forth
   btnDUP.show();

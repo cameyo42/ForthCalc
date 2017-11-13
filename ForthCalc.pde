@@ -22,7 +22,6 @@ PFont digitFont;
 PFont outputFont;
 // font color
 color digitCol = color(10,10,10);
-//color digitCol = color(0);
 color digitOutputCol = color(60,60,60);
 color outputCol = color(50,10,10);
 
@@ -34,10 +33,6 @@ double _E     = Math.E;
 double _PHI   =   (1 + Math.sqrt(5))/2;
 //double _PHI = 1.618033988749895;
 // Number limits for formatting purpose
-//double maxNum = 1e9;
-//double minNum = -1e9;
-//double maxEps = 1e-9;
-//double minEps = -1e-9;
 double maxNum = 1e12;
 double minNum = -1e12;
 double maxEps = 1e-12;
@@ -163,6 +158,9 @@ PImage btnSTAT_IMG, btnLR_IMG;
 
 Button btnSLOPE;
 PImage btnSLOPE_IMG;
+
+Button btnEDIT, btnEXIT;
+PImage btnEDIT_IMG, btnEXIT_IMG;
 
 // Forth Buttons
 Button btnDUP, btnDROP, btnSWAP, btnOVER, btnROT, btnNIP, btnTUCK;
@@ -383,6 +381,8 @@ void mousePressed()
   btnASEQ.onClick();
   btnGSEQ.onClick();
   btnSLOPE.onClick();
+  btnEDIT.onClick();
+  btnEXIT.onClick();
 
   // Forth
   btnDUP.onClick();
@@ -535,7 +535,7 @@ void fnsaveFILE()
   loop();
 }
 
-void fnHELP()
+void fnHELP() // open manual
 {
   cursor(WAIT);
   if (fileExists(dataPath("ForthCalculator.pdf")))
@@ -546,7 +546,7 @@ void fnHELP()
   cursor(ARROW);
 }
 
-void fnEDIT()
+void fnEDIT() // edit stack.txt
 {
   cursor(WAIT);
   if (fileExists(dataPath("stack.txt")))
@@ -555,4 +555,9 @@ void fnEDIT()
   }
   else { outputSTR = "File 'stack.txt' is missing."; }
   cursor(ARROW);
+}
+
+void fnEXIT() // exit
+{
+  exit();
 }

@@ -133,7 +133,6 @@ void saveButtons()
   //btnLR_IMG.save("btnLR_IMG.png");
   //btnSTOALL_IMG.save("btnSTOALL_IMG.png");
   //btnRCLALL_IMG.save("btnRCLALL_IMG.png");
-  //btnSLOPE_IMG.save("btnSLOPE_IMG.png");
   //btnVECADD_IMG.save("btnVECADD_IMG.png");
   //btnVECSUB_IMG.save("btnVECSUB_IMG.png");
   //btnVECCRO_IMG.save("btnVECCRO_IMG.png");
@@ -141,4 +140,7 @@ void saveButtons()
   //btnVECANG_IMG.save("btnVECANG_IMG.png");
   //btnVECMAG_IMG.save("btnVECMAG_IMG.png");  
   //btnX_Y_IMG.save("btnX_Y_IMG.png");  
+  btnSLOPE_IMG.save("_btnSLOPE_IMG.png");
+  btnEDIT_IMG.save("_btnEDIT_IMG.png");
+  btnEXIT_IMG.save("_btnEXIT_IMG.png");
 }
