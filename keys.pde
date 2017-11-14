@@ -138,5 +138,5 @@ void keyPressed()
   //if (key == '>') { println(digitNUM); pila.printStack(); }
 
   // Edit stack with text editor
-  if (key == '`') { fnEDIT(); }
+  if (key == 'k' || key == 'K') { fnEDIT(); }
 }
