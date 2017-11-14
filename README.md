@@ -25,6 +25,7 @@ Features:
 - Time arithmetic
 - Copy and Paste stack numbers
 - Save and Load stack numbers
+- Edit stack numbers with external text editor  
 - Infinity and NaN numbers
 - Italian and English manual (60 pages)
 - ...
