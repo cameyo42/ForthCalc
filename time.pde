@@ -89,7 +89,7 @@ void fnTADD()
       //println(res$);
       double res = Double.valueOf(res$);
       //println(res);
-// For example, the result of TIME('11:02:26') - '00:32:56' is 102930 (a duration of 10 hours, 29 minutes, and 30 seconds).
+      //Example, the result of TIME('11:02:26') - '00:32:56' is 102930 (a duration of 10 hours, 29 minutes, and 30 seconds).
       digitNUM = res;
       outputSTR = String.valueOf(digitNUM);
       isResult = true;

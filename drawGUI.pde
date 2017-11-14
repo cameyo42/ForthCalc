@@ -1,4 +1,3 @@
-
 void drawLCD()
 {
   image(lcd_IMG, 0, 0);
@@ -39,26 +38,6 @@ void drawOutput()
   fill(outputCol);
   text(outputSTR, 300, 349);
 }
-
-//void setNumberFormat(int num)
-//{
-//  switch(num)
-//  {
-//    case  0: df = new DecimalFormat("#,##0E0"); break;
-//    case  1: df = new DecimalFormat("#,##0.0E0"); break;
-//    case  2: df = new DecimalFormat("#,##0.00E0"); break;
-//    case  3: df = new DecimalFormat("#,##0.000E0"); break;
-//    case  4: df = new DecimalFormat("#,##0.0000E0"); break;
-//    case  5: df = new DecimalFormat("#,##0.00000E0"); break;
-//    case  6: df = new DecimalFormat("#,##0.000000E0"); break;
-//    case  7: df = new DecimalFormat("#,##0.0000000E0"); break;
-//    case  8: df = new DecimalFormat("#,##0.00000000E0"); break;
-//    case  9: df = new DecimalFormat("#,##0.000000000E0"); break;
-//    case 10: df = new DecimalFormat("#,##0.0000000000E0"); break;
-//    case 11: df = new DecimalFormat("#,##0.00000000000E0"); break;
-//    case 12: df = new DecimalFormat("#,##0.000000000000E0"); break;
-//  }
-//}
 
 String formatNumber(double n)
 {

@@ -12,7 +12,7 @@ void fnFIX()
     digitRESET = "0." + nf(0, numFloating);
     fnDROP();
   }
-  else { outputSTR = "FIX: integer number required [-1, 9]"; }
+  else { outputSTR = "FIX: integer number required [-2, 9]"; }
 }
 
 void enterPressed()

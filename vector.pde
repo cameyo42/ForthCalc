@@ -198,5 +198,3 @@ void fnVECMAG()
   }
   else { outputSTR = "Vector3D Magnitude and Heading: three numbers required."; }
 }
-
-

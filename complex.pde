@@ -55,7 +55,7 @@ void fnCXSUB()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Complex suctraction: four numbers required."; }
+  else { outputSTR = "Complex subtraction: four numbers required."; }
 }
 // sottrazione di due numeri complessi
 double[] CXSUB(double re1, double im1, double re2, double im2)
@@ -132,6 +132,7 @@ void fnCXDIV()
   }
   else { outputSTR = "Complex division: four numbers required."; }
 }
+
 // divisione di due numeri complessi
 double[] CXDIV(double re1, double im1, double re2, double im2)
 {
@@ -162,7 +163,7 @@ void fnCXINV()
     {
       pila.push(re1);
       digitNUM = im1;
-      outputSTR = "Complex inverse: 0+i0 does not have a reciprocal.";
+      outputSTR = "Complex inverse: 0 + i0 does not have a reciprocal.";
       isResult = true;
       isBlocked = false;
     }
@@ -264,5 +265,3 @@ double[] CXPOW(double re1, double im1, int n)
   double[] result = { re, im };
   return(result);
 }
-
-//double CX

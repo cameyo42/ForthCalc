@@ -16,7 +16,7 @@
 // 2tuck (a b c d -- c d a b c d) Copy the top couple of value below the second couple of value.
 
 // pick ( xu...x1 x0 u -- xu...x1 x0 xu ) Remove u. Copy the xu to the top of the stack. Num items >= u+2.
-// roll ( xu xu-1 ... x0 u -- xu-1 ... x0 xu ) Remove u. Rotate u+1 items on the top of the stack.Num items > u+2.
+// roll ( xu xu-1 ... x0 u -- xu-1 ... x0 xu ) Remove u. Rotate u+1 items on the top of the stack. Num items > u+2.
 //--------------------------------------------------------------------------
 
 // DUP (a -- a a) Duplica il valore in cima alla pila
@@ -431,7 +431,7 @@ void fnRUPS()
   else { outputSTR = "R UP: at least two numbers required."; }
 }
 
-// Rotate Up the stack by N items (BUG: negative roll)
+// Rotate Up the stack by N items
 void fnROLLS()
 {
   int idx = (int) digitNUM;
