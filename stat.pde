@@ -158,8 +158,6 @@ void fnLR()
     //  println(listaX[i],listaY[i]);
     //}
     // calculate statistic parameters
-    //Arrays.sort(listaX); // sort array
-    //Arrays.sort(listaY); // sort array
     double mediaX = 0.0;
     double mediaY = 0.0;
     double sommaXY = 0.0; double mediaXY = 0.0;

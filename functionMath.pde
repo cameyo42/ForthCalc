@@ -31,19 +31,13 @@
 
 // number > 10e12 ==> show eng format
 
-// Binary functions and conversion
-// Statistic functions and probability functions
-// Units conversion
-// Physical Constant
-// Solve Phytagoras (solve for zero)
-// leap year
-// luna (1,28)
-
 void fnLASTX()
 {
   if (!isBlocked && isResult) { pila.push(digitNUM); }
   digitNUM = lastX;
   outputSTR = String.valueOf(digitNUM);
+  isResult = true;
+  isBlocked = false;  
 }
 
 // create number with exponent Yx10^X
@@ -74,9 +68,9 @@ void fnCLS()
   pila.clearStack();
   digitNUM = 0.0;
   digitSTR = digitRESET;
+  outputSTR = String.valueOf(digitNUM);
   isBlocked = true;
   isResult = true;
-  outputSTR = String.valueOf(digitNUM);
 }
 
 void fnX_Y()
@@ -92,12 +86,11 @@ void fnPLUS()
     double x = digitNUM;
     double y = pila.pop();
     digitNUM = y + x;
-    //pila.push(digitNUM);
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "+: two numbers required."; }
+  else { outputSTR = "Addition: two numbers required."; }
 }
 
 void fnMINUS()
@@ -112,7 +105,7 @@ void fnMINUS()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "-: two numbers required."; }
+  else { outputSTR = "Subtraction: two numbers required."; }
 }
 
 void fnMULT()
@@ -127,7 +120,7 @@ void fnMULT()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "*: two numbers required."; }
+  else { outputSTR = "Multiplication: two numbers required."; }
 }
 
 void fnDIV()
@@ -144,9 +137,9 @@ void fnDIV()
       isResult = true;
       isBlocked = false;
     }
-    else { outputSTR = "/: can't divide by zero."; }
+    else { outputSTR = "Division: can't divide by zero."; }
   }
-  else { outputSTR = "/: two numbers required."; }
+  else { outputSTR = "Division: two numbers required."; }
 }
 
 void fnSQRT()
@@ -192,7 +185,7 @@ void fnPOW()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "y^x: two numbers required."; }
+  else { outputSTR = "Pow: two numbers required."; }
 }
 
 void fnROOTS()
@@ -215,7 +208,7 @@ void fnROOTS()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "roots: two numbers required."; }
+  else { outputSTR = "Roots: two numbers required."; }
 }
 
 void fnINVERSE()
@@ -228,7 +221,7 @@ void fnINVERSE()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "1/x: Zero does not have a reciprocal."; }
+  else { outputSTR = "Inverse: Zero does not have a reciprocal."; }
 }
 
 void fnCBRT()
@@ -272,7 +265,7 @@ void fnLN()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "LN: positive number required."; }
+  else { outputSTR = "Natural Log: positive number required."; }
 }
 
 void fnLOG()
@@ -285,7 +278,7 @@ void fnLOG()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "LOG: positive number required."; }
+  else { outputSTR = "Log10: positive number required."; }
 }
 
 void fnPERC()
@@ -300,7 +293,7 @@ void fnPERC()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "%: two numbers required."; }
+  else { outputSTR = "Percentage: two numbers required."; }
 }
 
 void fnDELTA()
@@ -315,7 +308,7 @@ void fnDELTA()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Delta%: two numbers required."; }
+  else { outputSTR = "Delta percentage: two numbers required."; }
 }
 
 void fnSIN()
@@ -359,7 +352,7 @@ void fnASIN()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "ASIN: Number must be in the range [-1, 1]."; }
+  else { outputSTR = "ArcSin: Number must be in the range [-1, 1]."; }
 }
 
 void fnACOS()
@@ -373,7 +366,7 @@ void fnACOS()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "ACOS: Number must be in the range [-1, 1]."; }
+  else { outputSTR = "ArcCos: Number must be in the range [-1, 1]."; }
 }
 
 void fnATAN()
@@ -434,7 +427,7 @@ void fnACOSH()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "ACOSH: Number must be equal or greater than 1."; }
+  else { outputSTR = "ArcCosh: Number must be equal or greater than 1."; }
 }
 
 void fnATANH()
@@ -448,7 +441,7 @@ void fnATANH()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "ATANH: Number must be in the range (-1, 1)."; }
+  else { outputSTR = "ArcTanh: Number must be in the range (-1, 1)."; }
 }
 
 void fnTODEG()
@@ -477,7 +470,6 @@ void fnPI()
 {
   lastX = digitNUM;
   if (!isBlocked && isResult) { pila.push(digitNUM); }
-  //pila.push(digitNUM);
   digitNUM = Math.PI;
   outputSTR = String.valueOf(digitNUM);
   isResult = true;
@@ -487,8 +479,7 @@ void fnPI()
 void fnE()
 {
   lastX = digitNUM;
-  if (!isBlocked ) { pila.push(digitNUM); }
-  //pila.push(digitNUM);
+  if (!isBlocked && isResult) { pila.push(digitNUM); }
   digitNUM = Math.E;
   outputSTR = String.valueOf(digitNUM);
   isResult = true;
@@ -498,8 +489,7 @@ void fnE()
 void fnPHI()
 {
   lastX = digitNUM;
-  if (!isBlocked ) { pila.push(digitNUM); }
-  //pila.push(digitNUM);
+  if (!isBlocked && isResult) { pila.push(digitNUM); }
   digitNUM = (1 + Math.sqrt(5))/2;
   outputSTR = String.valueOf(digitNUM);
   isResult = true;
@@ -535,7 +525,7 @@ void fnINT()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Int: number our of range"; }
+  else { outputSTR = "Integer part: number our of range"; }
 }
 
 void fnFRAC()
@@ -567,7 +557,7 @@ void fnFRAC()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Frac: number out of range"; }
+  else { outputSTR = "Fractional part: number out of range"; }
 }
 
 void fnDMS() // from decimal degrees to degrees minute second
@@ -610,7 +600,7 @@ void fnDD() // from degrees minute second to decimal degrees
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Decimal Degrees: three numbers required (grad min sec)."; }
+  else { outputSTR = "Decimal Degrees: three numbers required (degree min sec)."; }
 }
 //------------------------------------------------------------
 
@@ -647,9 +637,9 @@ void fnROUND()
       isResult = true;
       isBlocked = false;
     }
-    else { outputSTR = "Round: integer number required [0, 9]"; }
+    else { outputSTR = "Round number: integer number required [0, 9]"; }
   }
-  else { outputSTR = "Round: two number required."; }
+  else { outputSTR = "Round number: two number required."; }
 }
 
 // ---------- ALGEBRIC FUNCTIONS ----------
@@ -705,7 +695,7 @@ void fnQUADRATIC()
     isBlocked = false;
     outputSTR = String.valueOf(digitNUM);
   }
-  else { outputSTR = "QUADRATIC: three numbers required."; }
+  else { outputSTR = "Solve Quadratic: three numbers required."; }
 }
 
 // Calculate GCD of n numbers
@@ -724,7 +714,6 @@ void fnGCD()
     }
     // calculate GCD of numbers in the array
     digitNUM = (double) calcGCD(lista);
-    //println(digitNUM);
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
@@ -770,7 +759,6 @@ void fnLCM()
     }
     // calculate LCM of numbers in the array
     digitNUM = (double) calcLCM_B(lista);
-    //println(digitNUM);
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
@@ -817,7 +805,7 @@ long calcLCM2(long p, long q)
   return (p*q)/(calcGCD2(p,q));
 }
 
-// Factorize a number
+// Factorize a number (prime decomposition)
 void fnFACTORIZE()
 {
   // max long value: 9,223,372,036,854,775,807
@@ -864,7 +852,7 @@ void fnPROPORTION()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "a/b = c/d: four numbers required."; }
+  else { outputSTR = "Ratio: four numbers required."; }
 }
 
 // Polar coordinates <--> Cartesian coordinate (ok)
@@ -887,7 +875,7 @@ void fnPOLAR()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Polar coord: two numbers required."; }
+  else { outputSTR = "Polar conversion: two numbers required."; }
 }
 
 void fnRECT()
@@ -915,14 +903,14 @@ void fnRECT()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Rect coord: two numbers required."; }
+  else { outputSTR = "Cartesian conversion: two numbers required."; }
 }
 
 // ---------- COMBINATORIAL FUNCTIONS ----------
 // Factorial x!
 void fnFACT()
 {
-  if ( (digitNUM > 0.0) && ((int)digitNUM == digitNUM))
+  if ((digitNUM > 0.0) && ((int)digitNUM == digitNUM))
   {
     cursor(WAIT);
     lastX = digitNUM;
@@ -933,7 +921,6 @@ void fnFACT()
     outputSTR = String.valueOf(digitNUM);
     isResult = true;
     isBlocked = false;
-
     // write result on file
     String s = f.toString();
     String n = num.toString();
@@ -941,17 +928,10 @@ void fnFACT()
     String filename = "fact" + n + ".txt";
     saveStrings(dataPath(filename), data);
     cursor(ARROW);
-
     // Update window (write is another thread)
-    //background(backCol);
-    //drawLCD();
-    //showGUI();
-    //if (viewShortcuts) { image(short_IMG, 0, 0); }
     loop();
-
-
   }
-  else { outputSTR = "x!: positive integer number required."; }
+  else { outputSTR = "Factorial: positive integer number required."; }
 }
 
 // Calculate Factorial
@@ -976,7 +956,7 @@ BigInteger factorial(BigInteger n)
 // Fibonacci
 void fnFIBO()
 {
-  if (digitNUM > 0.0)
+  if ((digitNUM > 0.0) && ((int)digitNUM == digitNUM))
   {
     cursor(WAIT);
     lastX = digitNUM;
@@ -998,16 +978,10 @@ void fnFIBO()
     saveStrings(dataPath(filename), data);
     //println(r);
     cursor(ARROW);
-
     // Update window (write is another thread)
-    //background(backCol);
-    //drawLCD();
-    //showGUI();
-    //if (viewShortcuts) { image(short_IMG, 0, 0); }
     loop();
-
   }
-  else { outputSTR = "Fibonacci: positive number required."; }
+  else { outputSTR = "Fibonacci: positive integer number required."; }
 }
 // Fibonacci
 // F(n+2) = F(n+1) + F(n)
@@ -1435,224 +1409,6 @@ class SisLin
 }
 //--------------------------------------------------------------------------
 
-//--------------------------------------------------------------------------
-// Simple Fraction Class
-// frazione f1, f2;
-// f1 = new frazione(2,5);
-// f2 = new frazione(1,6);
-// f1 = f1 + f2  ->  f1.add(f2);
-// f1 = f1 - f2  ->  f1.sub(f2);
-// f1 = f1 * f2  ->  f1.mul(f2);
-// f1 = f1 / f2  ->  f1.div(f2);
-// auto simplify result
-
-class frazione
-{
-  long numeratore;
-  long denominatore;
-
-  frazione(long numeratore, long denominatore)
-  {
-    this.numeratore = numeratore;
-    this.denominatore = denominatore;
-  }
-
-  void add(frazione f)
-  {
-    numeratore = numeratore*f.denominatore + f.numeratore*denominatore;
-    denominatore = denominatore*f.denominatore;
-    semplifica();
-  }
-
-  void sub(frazione f)
-  {
-    numeratore = numeratore*f.denominatore - f.numeratore*denominatore;
-    denominatore = denominatore*f.denominatore;
-    semplifica();
-  }
-
-  void mul(frazione f)
-  {
-    numeratore = numeratore*f.numeratore;
-    denominatore = denominatore*f.denominatore;
-    semplifica();
-  }
-
-  void div(frazione f)
-  {
-    numeratore = numeratore*f.denominatore;
-    denominatore = denominatore*f.numeratore;
-    semplifica();
-  }
-
-  void semplifica()
-  {
-    long n1=numeratore, n2=denominatore, temp;
-    while (n2!=0)
-    {
-      temp = n2;
-      n2 = n1%temp;
-      n1 = temp;
-    }
-    numeratore = numeratore/n1;
-    denominatore = denominatore/n1;
-  }
-}
-
-// ADD FRACTIONS
-void fnFRACTadd()
-{
-  if (pila.stackSize() > 2)
-  {
-    lastX = digitNUM;
-    long d = (long) digitNUM;
-    long c = (long) pila.pop();
-    long b = (long) pila.pop();
-    long a = (long) pila.pop();
-    f1 = new frazione(a,b);
-    f2 = new frazione(c,d);
-    f1.add(f2);
-    pila.push((double) f1.denominatore);
-    digitNUM = (double) f1.numeratore;
-    outputSTR = String.valueOf(digitNUM);
-    isResult = true;
-    isBlocked = false;
-  }
-  else { outputSTR = "Fractions Sum: four numbers required."; }
-}
-
-// SUB FRACTIONS
-void fnFRACTsub()
-{
-  if (pila.stackSize() > 2)
-  {
-    lastX = digitNUM;
-    long d = (long) digitNUM;
-    long c = (long) pila.pop();
-    long b = (long) pila.pop();
-    long a = (long) pila.pop();
-    f1 = new frazione(a,b);
-    f2 = new frazione(c,d);
-    f1.sub(f2);
-    pila.push((double) f1.denominatore);
-    digitNUM = (double) f1.numeratore;
-    outputSTR = String.valueOf(digitNUM);
-    isResult = true;
-    isBlocked = false;
-  }
-  else { outputSTR = "Fractions Sub: four numbers required."; }
-}
-
-// MUL FRACTIONS
-void fnFRACTmul()
-{
-  if (pila.stackSize() > 2)
-  {
-    lastX = digitNUM;
-    long d = (long) digitNUM;
-    long c = (long) pila.pop();
-    long b = (long) pila.pop();
-    long a = (long) pila.pop();
-    f1 = new frazione(a,b);
-    f2 = new frazione(c,d);
-    f1.mul(f2);
-    pila.push((double) f1.denominatore);
-    digitNUM = (double) f1.numeratore;
-    outputSTR = String.valueOf(digitNUM);
-    isResult = true;
-    isBlocked = false;
-  }
-  else { outputSTR = "Fractions Mul: four numbers required."; }
-}
-
-// DIV FRACTIONS
-void fnFRACTdiv()
-{
-  if (pila.stackSize() > 2)
-  {
-    lastX = digitNUM;
-    long d = (long) digitNUM;
-    long c = (long) pila.pop();
-    long b = (long) pila.pop();
-    long a = (long) pila.pop();
-    f1 = new frazione(a,b);
-    f2 = new frazione(c,d);
-    f1.div(f2);
-    pila.push((double) f1.denominatore);
-    digitNUM = (double) f1.numeratore;
-    outputSTR = String.valueOf(digitNUM);
-    isResult = true;
-    isBlocked = false;
-  }
-  else { outputSTR = "Fractions Div: four numbers required."; }
-}
-
-// From decimal number to fraction
-void fnFRACTgen()
-{
-  if (pila.stackSize() > 0)
-  {
-    lastX = digitNUM;
-    double numeratore = 0;
-    double denominatore = 0;
-    String numero$="";
-    String i$="", a$="", p$="";
-
-    int cifrePeriodo = (int) Math.abs(digitNUM);
-    double numero = pila.pop();
-    df = new DecimalFormat("#,##0.0######################");
-    numero$ = df.format(numero);
-    if (cifrePeriodo > (numero$.length() - numero$.indexOf('.') - 1))
-    {
-      pila.push(numero);
-      digitNUM = cifrePeriodo;
-      outputSTR = "Fraction Generator: incompatible numbers.";
-      isResult = true;
-      isBlocked = true;
-      return ;
-    }
-    else
-    {
-      if (cifrePeriodo == 0) { cifrePeriodo = 1; numero$ = numero$ + "0"; } // simple decimal number (no period)
-      i$ = numero$.substring(0, numero$.indexOf('.'));
-      a$ = numero$.substring(numero$.indexOf('.') + 1, numero$.length() - cifrePeriodo);
-      p$ = numero$.substring(numero$.length() - cifrePeriodo, numero$.length());
-      String all$ = i$ + a$ + p$;
-      double allNumber = Double.valueOf(all$);
-      String sub$ = i$ + a$;
-      double subNumber = Double.valueOf(sub$);
-      // Calcolo numeratore
-      numeratore = allNumber - subNumber;
-      if (numero < 0) { numeratore = -numeratore; }
-      // Calcolo denominatore
-      String denom$ = "";
-      for(int i = 0; i < p$.length(); i++) { denom$ = denom$ + "9"; };
-      for(int i = 0; i < a$.length(); i++) { denom$ = denom$ + "0"; };
-      denominatore = Double.valueOf(denom$);
-      // Semplifica numeratore/denominatore
-      double n1 = numeratore;
-      double n2 = denominatore;
-      double temp;
-      while (n2!=0)
-      {
-        temp = n2;
-        n2 = n1%temp;
-        n1 = temp;
-      }
-      numeratore = numeratore/n1;
-      denominatore = denominatore/n1;
-      // Write result on stack
-      pila.push(denominatore);
-      digitNUM = numeratore;
-      outputSTR = String.valueOf(digitNUM);
-      isResult = true;
-      isBlocked = false;
-    }
-  }
-  else { outputSTR = "Fraction Generator: two numbers required."; }
-}
-//--------------------------------------------------------------------------
-
 // EVALUATE POLYNOMIAL
 void fnHORNER()
 {
@@ -1673,7 +1429,7 @@ void fnHORNER()
     {
       pila.push(grado);
       digitNUM = x;
-      outputSTR = "Eval Poly: numbers of coefficients differs from degree.";
+      outputSTR = "Polynomial: numbers of coefficients differs from degree.";
       return;
     }
     double eval = Horner(grado, x, coeff);
@@ -1688,7 +1444,7 @@ void fnHORNER()
     isResult = true;
     isBlocked = false;
   }
-  else { outputSTR = "Eval Polynomial: at least four numbers required."; }
+  else { outputSTR = "Polynomial: at least four numbers required."; }
 }
 // Evaluate polynomial with Horner method
 double Horner(int grado, double x, double[] coeff)
@@ -1712,7 +1468,6 @@ void fnCUBIC()
     double c = pila.pop();
     double b = pila.pop();
     double a = pila.pop();
-
     if ( a == 0.0 ) // Quadratic Equation --> Use Solve Quaddratic
     {
       pila.push(a);
@@ -1724,10 +1479,8 @@ void fnCUBIC()
       outputSTR = "Solve Cubic: a*x^3 = 0 --> use Solve Quadratic.";
       return;
     }
-
     // solve cubic equation
     double[] radici = solveCubic(a, b, c, d);
-
     // write solution on stack
     pila.push(radici[5]); // i3
     pila.push(radici[4]); // x3
@@ -1829,7 +1582,6 @@ double[] solveCubic(double a, double b, double c, double d)
   }
   else // error
   { println("Solve Cubic Error"); }
-
   // return solution (error will return: 0,0,0,0,0,0)
   double[] rootList = { x1, i1, x2, i2, x3, i3 };
   return(rootList);

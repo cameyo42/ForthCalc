@@ -77,12 +77,12 @@ void saveButtons()
   //btnFRACTSUB_IMG.save("btnFRACTSUB_IMG.png");
   //btnFRACTMUL_IMG.save("btnFRACTMUL_IMG.png");
   //btnFRACTDIV_IMG.save("btnFRACTDIV_IMG.png");
-  //btnCRAMER_IMG  .save("btnCRAMER_IMG  .png");
+  //btnCRAMER_IMG.save("btnCRAMER_IMG.png");
   //btnTRIANGLE_IMG.save("btnTRIANGLE_IMG.png");
-  //btnHORNER_IMG  .save("btnHORNER_IMG  .png");
-  //btnCEQ_IMG     .save("btnCEQ_IMG     .png");
-  //btnCBRT_IMG    .save("btnCBRT_IMG    .png");
-  //btnEEX_IMG     .save("btnEEX_IMG     .png");
+  //btnHORNER_IMG.save("btnHORNER_IMG.png");
+  //btnCEQ_IMG.save("btnCEQ_IMG.png");
+  //btnCBRT_IMG.save("btnCBRT_IMG.png");
+  //btnEEX_IMG.save("btnEEX_IMG.png");
   //btnFRACTGEN_IMG.save("btnFRACTGEN_IMG.png");
   //btnDUP_IMG.save("btnDUP_IMG.png");
   //btnDROP_IMG.save("btnDROP_IMG.png");

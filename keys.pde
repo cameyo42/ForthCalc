@@ -9,39 +9,6 @@ void keyPressed()
   // play sound
   if (sound) { click.play(); }
 
-  if (key == '[') // test
-  {
-    //fnTRIANGLE();
-    //fnCXINV();
-    //fnTADD();
-    //fnASEQ();
-    //fnTOBIN();
-    //fnDIST();
-    //fnSTOALL();
-    fnVECADD();
-  }
-
-  if (key == ']') // test
-  {
-    //fnTRIANGLE();
-    //fnCXPOW();
-    //fnTSUB();
-    //fnGSEQ();
-    //fnGSEQ();
-    //fnTODEC();
-    //fnRCLALL();
-    //fnVECSUB();
-  }
-
-  if (key == ';') // test
-  {
-    //fnTRIANGLE();
-    //fnCXDIV();
-    //fnCXMUL();
-    //fnPRINTMEM();
-    fnEDIT();
-  }
-
   // Sound keys (on/off)
   if (key == '=') { sound = !sound; }
 
@@ -60,7 +27,7 @@ void keyPressed()
   // change sign
   if (key == '_' || key == '\\') { changeSignPressed(); }
 
-  // insert floating point "."
+    // insert floating point "."
   if (key == '.' || key == ',') { dotPressed(); }
 
   // insert BACKSPACE --> delete a input digit
@@ -99,6 +66,15 @@ void keyPressed()
   if (key == 'h' || key == 'H')  { fnDELTA(); }
   if (key == 'j' || key == 'J')  { fnFRAC(); }
 
+  if (key == '[') { fnSIN(); }
+  if (key == '{') { fnASIN(); }
+
+  if (key == ']') { fnCOS(); }
+  if (key == '}') { fnACOS(); }
+
+  if (key == ';') { fnTAN(); }
+  if (key == ':') { fnATAN(); }
+
   // recover last X
   if (key == 'x' || key == 'X')  { fnLASTX(); }
 
@@ -116,19 +92,21 @@ void keyPressed()
   if (keyCode==117) { fnNIP(); }  // F6
   if (keyCode==118) { fnTUCK(); } // F7
 
-  // paste stack  (Ctrl+v)
-  if (key == 0x16) { fnPASTES(); }
-  // copy stack (Ctrl+c)
-  if (key == 0x03) { fnCOPYS(); }
+  // copy stack
+  //if (key == 0x03) { fnCOPYS(); } //(Ctrl+c)
+  if (key == 'c' || key == 'C' ) { fnCOPYS(); }
+  // paste stack
+  //if (key == 0x16) { fnPASTES(); } //(Ctrl+v)
+  if (key == 'v' || key == 'V') { fnPASTES(); }
 
   if (keyCode==119) { fnChangeTrigUnit(); } // F8 (Degrees <-> Radians)
 
-  if (keyCode==120) { fnPICKS(); } // F9
-  if (keyCode==121) { fnROLLS(); } // F10
-  if (keyCode==122) { fnFLIPS(); } // F11
+  if (keyCode==120)    { fnPICKS(); }  // F9
+  if (keyCode==121)    { fnROLLS(); }  // F10
+  if (keyCode==122)    { fnFLIPS(); }  // F11 reverse stack
+  if (keyCode==123)    { fnCLS(); }    // F12 clear stack
   if (keyCode == UP)   { fnRUPS(); }   // roll up the stack (+1)
   if (keyCode == DOWN) { fnRDOWNS(); } // roll down the stack (-1)
-  if (keyCode==123) { fnCLS(); } // F12  clear stack
 
   // load stack from file  (n)
   if (key == 'n' || key == 'N') { fnloadFILE(); }
@@ -157,5 +135,8 @@ void keyPressed()
   if (key=='z'||key=='Z') { saveImage(); }
 
   // print stack (console)
-  if (key == '`') { println(digitNUM); pila.printStack(); }
+  //if (key == '>') { println(digitNUM); pila.printStack(); }
+
+  // Edit stack with text editor
+  if (key == '`') { fnEDIT(); }
 }
