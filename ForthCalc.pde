@@ -193,7 +193,7 @@ void setup()
     PImage icon = loadImage("icon.png"); // set icon
     surface.setIcon(icon);
   }
-  // set locale
+  // set locale to English-United States
   Locale.setDefault(new Locale("en", "US"));
   background(backCol);
   sound = false;
