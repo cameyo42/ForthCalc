@@ -193,6 +193,8 @@ void setup()
     PImage icon = loadImage("icon.png"); // set icon
     surface.setIcon(icon);
   }
+  // set locale
+  Locale.setDefault(new Locale("en", "US"));
   background(backCol);
   sound = false;
   // load click sound from the /data folder
