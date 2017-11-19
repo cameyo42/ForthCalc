@@ -197,15 +197,15 @@ void fnTSUB()
       //println(hh,mm,ss);
       hh$ = String.valueOf(hh);
       mm$ = String.valueOf(mm);
-      println(mm$);
+      //println(mm$);
       if (mm$.length() == 1) { mm$ = "0"+ mm$; }
       ss$ = String.valueOf(ss);
       if (ss$.length() == 1) { ss$ = "0"+ ss$; }
       String res$ = hh$ +mm$ +ss$;
-      println(res$);
+      //println(res$);
       double res = Double.valueOf(res$);
       if (scambio) { res = -res; };
-      println(res);
+      //println(res);
       // The result of TIME('11:02:26') - '00:32:56' is 102930 (a duration of 10 hours, 29 minutes, and 30 seconds).
       digitNUM = res;
       outputSTR = String.valueOf(digitNUM);

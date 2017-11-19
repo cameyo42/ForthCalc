@@ -47,7 +47,7 @@ boolean sound;
 // stack of double (RPN)
 StackDouble pila = new StackDouble();
 int maxSlot = 4096;
-// vector clipboard for stack (change with a link list)
+// vector clipboard for stack
 double[] clipboard = new double[maxSlot];
 int clipboardItems;
 // shortcut help
