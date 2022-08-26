@@ -55,16 +55,16 @@ void keyPressed()
   if (key == 'e' || key == 'E')  { fnPOWTEN(); }
   if (key == 'r' || key == 'R')  { fnPOW(); }
   if (key == 't' || key == 'T')  { fnINVERSE(); }
-  if (key == 'y' || key == 'Y')  { fnPERC(); }
-  if (key == 'u' || key == 'U')  { fnINT(); }
+  if (key == 'y' || key == 'Y')  { fnINT(); }
+  if (key == 'u' || key == 'U')  { fnABS(); }
   // second row
   if (key == 'a' || key == 'A')  { fnSQRT(); }
   if (key == 's' || key == 'S')  { fnLN(); }
   if (key == 'd' || key == 'D')  { fnLOG(); }
   if (key == 'f' || key == 'F')  { fnROOTS(); }
-  if (key == 'g' || key == 'G')  { fnABS(); }
-  if (key == 'h' || key == 'H')  { fnDELTA(); }
-  if (key == 'j' || key == 'J')  { fnFRAC(); }
+  if (key == 'g' || key == 'G')  { fnCBRT(); }
+  if (key == 'h' || key == 'H')  { fnFRAC(); }
+  if (key == 'j' || key == 'J')  { fnROUND(); }
 
   if (key == '[') { fnSIN(); }
   if (key == '{') { fnASIN(); }

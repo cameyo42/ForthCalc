@@ -178,7 +178,7 @@ void fnTSUB()
       // find bigger time
       boolean scambio = false;
       //println((ss1 + mm1*1000 + hh1 *10000),(ss2 + mm2*1000 + hh2 *10000));
-      if (ss1 + mm1*1000 + hh1 *10000 < ss2 + mm2*1000 + hh2 *10000)
+      if (ss1 + mm1*1000 + hh1 *10000 < ss2 + mm2*1000 + hh2*10000)
       {
         long temp = hh1; hh1 = hh2; hh2 = temp;
         temp = mm1; mm1 = mm2; mm2 = temp;

@@ -1,7 +1,7 @@
 // ForthCalc.pde
 // A RPN calculator Forth oriented
-// processing 3.x
-// Copyright cameyo 2017
+// processing 3.x - 4.x
+// Copyright cameyo 2017-2022
 // MIT License
 
 // * Fast Fibonacci code

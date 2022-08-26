@@ -1515,28 +1515,28 @@ double[] solveCubic(double a, double b, double c, double d)
 
   // Calculate Discriminants F, G, H
   F = (3*(c/a) - (b*b)/(a*a)) / 3;
-  //println("F = "+F);
+  println("F = "+F);
 
   G = ((2*(b*b*b)/(a*a*a)) - (9*b*c/(a*a)) + (27*(d/a))) / 27;
-  //println("G = "+G);
+  println("G = "+G);
 
   H = ((G*G)/4) + ((F*F*F)/27);
-  //println("H = "+H);
+  println("H = "+H);
 
   // Check Discriminants to determine type of roots
   if (H > 0) // 1 real root AND 2 complex roots
   {
     I = -(G/2) + Math.sqrt(H);
-    //println("I = "+I);
+    println("I = "+I);
 
     J = Math.cbrt(I);
-    //println("J = "+J);
+    println("J = "+J);
 
     K = (-G/2) - Math.sqrt(H);
-    //println("K = "+K);
+    println("K = "+K);
 
     L = Math.cbrt(K);
-    //println("L ="+L);
+    println("L ="+L);
 
     x1 =  (J + L) - (b/(3*a));
     x2 = -(J + L)/2 - (b/(3*a));
